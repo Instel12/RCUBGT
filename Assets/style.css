@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    font-family: "Space Mono", monospace;
+}
+
+.Banner {
+    background-color: white;
+    margin: 1%;
+    padding: 1%;
+}
+
+#Container {
+    flex: 1;
+    margin: 1%;
+    border: none;
+}
+
+#particles {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+}
+
+a {
+    cursor: pointer;
+}

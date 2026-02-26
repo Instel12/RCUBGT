@@ -1,0 +1,75 @@
+{
+    "BaseURL": "../GameAssets/",
+    "Games": [
+        {
+            "Name": "Retro Bowl",
+            "SuffixURL": "RetroBowl/index.html",
+            "Icon": "RetroBowl/icon.jpg"
+        },
+        {
+            "Name": "Escape Road",
+            "SuffixURL": "EscapeRoad/index.html",
+            "Icon": "EscapeRoad/icon.png"
+        },
+        {
+            "Name": "Minecraft",
+            "SuffixURL": "Minecraft188/index.html",
+            "Icon": "Minecraft188/icon.png"
+        },
+        {
+            "Name": "Cookie Clicker",
+            "SuffixURL": "CookieClicker/index.html",
+            "Icon": "CookieClicker/icon.png"
+        },
+        {
+            "Name": "Bitlife",
+            "SuffixURL": "Bitlife/index.html",
+            "Icon": "Bitlife/icon.webp"
+        },
+        {
+            "Name": "Gorilla Tag",
+            "SuffixURL": "GorillaTag/index.html",
+            "Icon": "GorillaTag/icon.webp"
+        },
+        {
+            "Name": "Dadish",
+            "SuffixURL": "Dadish/index.html",
+            "Icon": "Dadish/icon.png"
+        },
+        {
+            "Name": "Superhot",
+            "SuffixURL": "Superhot/index.html",
+            "Icon": "Superhot/icon.jpg"
+        },
+        {
+            "Name": "Idle Breakout",
+            "SuffixURL": "IdleBreakout/index.html",
+            "Icon": "IdleBreakout/icon.png"
+        },
+        {
+            "Name": "Block Blast",
+            "SuffixURL": "BlockBlast/index.html",
+            "Icon": "BlockBlast/icon.webp"
+        },
+        {
+            "Name": "Baldi CR",
+            "SuffixURL": "BaldisBasicsClassicRemastered/index.html",
+            "Icon": "BaldisBasicsClassicRemastered/icon.png"
+        },
+        {
+            "Name": "Baldi Plus",
+            "SuffixURL": "BaldisBasicsPlus/index.html",
+            "Icon": "BaldisBasicsPlus/icon.png"
+        },
+        {
+            "Name": "Tattletail",
+            "SuffixURL": "Tattletail/index.html",
+            "Icon": "Tattletail/icon.png"
+        },
+        {
+            "Name": "Schoolboy Run",
+            "SuffixURL": "SchoolboyRunaway/index.html",
+            "Icon": "SchoolboyRunaway/icon.png"
+        }
+    ]
+}
