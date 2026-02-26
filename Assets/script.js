@@ -1,4 +1,4 @@
-const manifestLocation = "https://raw.githubusercontent.com/Instel12/RCUBGT/refs/heads/main/GameAssets/"; // if ur developing, make it "../GameAssets/manifest.json"
+const manifestLocation = "https://cdn.jsdelivr.net/gh/Instel12/RCUBGT@main/Assets/"; // if ur developing, make it "../GameAssets/manifest.json"
 const container = document.getElementById("Container");
 
 particlesJS("particles", {
@@ -107,3 +107,4 @@ async function loadGame(url) {
     }
 
 }
+
