@@ -1,5 +1,6 @@
-const manifestLocation = "https://cdn.jsdelivr.net/gh/Instel12/RCUBGT@main/Assets/"; // if ur developing, make it "../GameAssets/manifest.json"
+const manifestLocation = "../GameAssets/manifest.json"; // if ur developing, make it "../GameAssets/manifest.json"
 const container = document.getElementById("Container");
+const gameoptions = document.getElementById("GameOptions");
 
 particlesJS("particles", {
     particles: {
@@ -17,6 +18,7 @@ particlesJS("particles", {
 LoadHomepage();
 
 function LoadHomepage() {
+    gameoptions.style.display = "none";
     const container = document.getElementById("Container");
 
     container.srcdoc = `
@@ -97,14 +99,17 @@ loadGames();
 }
 
 async function loadGame(url) {
-    container.srcdoc = "Downloading content...";
-    try {
-        const response = await fetch(url);
-        const text = await response.text();
-        container.srcdoc = text;
-    } catch (error) {
-        container.srcdoc = `An error occurred while loading the game: ${error.message}`;
-    }
+    gameoptions.style.display = "block";
+    const response = await fetch(url);
+    const html = await response.text();
 
+    const iframe = document.getElementById("Container");
+
+    iframe.contentWindow.document.open();
+    iframe.contentWindow.document.write(html);
+    iframe.contentWindow.document.close();
 }
 
+function fullscreen() {
+    container.requestFullscreen();
+}

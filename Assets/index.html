@@ -4,12 +4,14 @@
     <title>RCUBGT</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <base href="https://raw.githubusercontent.com/Instel12/RCUBGT/refs/heads/main/Assets/">
 </head>
 
 <body>
-    <div class="Banner">
+    <div class="Banner" style="display: flex; justify-content: space-between; align-items: center;">
         <a onclick="LoadHomepage()">RCUBGT</a>
+        <span id="GameOptions">
+            <a onclick="fullscreen()">Fullscreen</a>
+        </span>
     </div>
 
     <iframe id="Container"></iframe>
@@ -18,5 +20,4 @@
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="script.js"></script>
 </body>
-
 </html>

@@ -52,12 +52,12 @@
             "Icon": "BlockBlast/icon.webp"
         },
         {
-            "Name": "Baldi CR",
+            "Name": "Baldi's Basics CR",
             "SuffixURL": "BaldisBasicsClassicRemastered/index.html",
             "Icon": "BaldisBasicsClassicRemastered/icon.png"
         },
         {
-            "Name": "Baldi Plus",
+            "Name": "Baldi's Basics Plus",
             "SuffixURL": "BaldisBasicsPlus/index.html",
             "Icon": "BaldisBasicsPlus/icon.png"
         },
@@ -67,9 +67,49 @@
             "Icon": "Tattletail/icon.png"
         },
         {
-            "Name": "Schoolboy Run",
+            "Name": "Schoolboy Runaway",
             "SuffixURL": "SchoolboyRunaway/index.html",
             "Icon": "SchoolboyRunaway/icon.png"
+        },
+        {
+            "Name": "Survival Race",
+            "SuffixURL": "SurvivalRace/index.html",
+            "Icon": "SurvivalRace/icon.png"
+        },
+        {
+            "Name": "Buckshot Roulette",
+            "SuffixURL": "BuckshotRoulette/index.html",
+            "Icon": "BuckshotRoulette/icon.png"
+        },
+        {
+            "Name": "Snow Rider 3D",
+            "SuffixURL": "SnowRider3D/index.html",
+            "Icon": "SnowRider3D/icon.png"
+        },
+        {
+            "Name": "Five Nights at Epstein's",
+            "SuffixURL": "FiveNightsAtEpsteins/index.html",
+            "Icon": "FiveNightsAtEpsteins/icon.png"
+        },
+        {
+            "Name": "Plants vs Zombies",
+            "SuffixURL": "PlantsVsZombies/index.html",
+            "Icon": "PlantsVsZombies/icon.png"
+        },
+        {
+            "Name": "Papa's Pizzaria",
+            "SuffixURL": "PapasPizzaria/index.html",
+            "Icon": "PapasPizzaria/icon.png"
+        },
+        {
+            "Name": "1v1.lol",
+            "SuffixURL": "1v1Lol/index.html",
+            "Icon": "1v1Lol/icon.png"
+        },
+        {
+            "Name": "Geomatry Dash Lite",
+            "SuffixURL": "GeomatryDashLite/index.html",
+            "Icon": "GeomatryDashLite/icon.png"
         }
     ]
 }
