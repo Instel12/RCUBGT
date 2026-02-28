@@ -110,6 +110,26 @@
             "Name": "Geomatry Dash Lite",
             "SuffixURL": "GeomatryDashLite/index.html",
             "Icon": "GeomatryDashLite/icon.png"
+        },
+        {
+            "Name": "Slope",
+            "SuffixURL": "Slope/index.html",
+            "Icon": "Slope/icon.png"
+        },
+        {
+            "Name": "The Impossible Quiz",
+            "SuffixURL": "TheImpossibleQuiz/index.html",
+            "Icon": "TheImpossibleQuiz/icon.png"
+        },
+        {
+            "Name": "Line Rider",
+            "SuffixURL": "LineRider/index.html",
+            "Icon": "LineRider/icon.png"
+        },
+        {
+            "Name": "Brotato",
+            "SuffixURL": "Brotato/index.html",
+            "Icon": "Brotato/icon.png"
         }
     ]
 }
