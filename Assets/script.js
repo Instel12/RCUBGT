@@ -1,4 +1,4 @@
-const manifestLocation = "https://instel12.github.io/RCUBGT/GameAssets/manifest.json"; // if ur developing, make it "../GameAssets/manifest.json"
+const manifestLocation = "../GameAssets/manifest.json"; // if ur developing, make it "../GameAssets/manifest.json"
 const container = document.getElementById("Container");
 const gameoptions = document.getElementById("GameOptions");
 const menuoptions = document.getElementById("MenuOptions");

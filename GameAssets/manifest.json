@@ -1,5 +1,5 @@
 {
-    "BaseURL": "https://instel12.github.io/RCUBGT/GameAssets/",
+    "BaseURL": "../GameAssets/",
     "Games": [
         {
             "Name": "Retro Bowl",
@@ -12,7 +12,12 @@
             "Icon": "EscapeRoad/icon.png"
         },
         {
-            "Name": "Minecraft",
+            "Name": "Minecraft 1.5.2",
+            "SuffixURL": "Minecraft152/index.html",
+            "Icon": "Minecraft152/icon.png"
+        },
+        {
+            "Name": "Minecraft 1.8.8",
             "SuffixURL": "Minecraft188/index.html",
             "Icon": "Minecraft188/icon.png"
         },
