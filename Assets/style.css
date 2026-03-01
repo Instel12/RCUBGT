@@ -29,3 +29,14 @@ body {
 a {
     cursor: pointer;
 }
+.Banner img {
+    height: 25px;
+    width: auto;
+    display: block;
+}
+
+#MenuOptions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}

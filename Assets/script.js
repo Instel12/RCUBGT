@@ -1,6 +1,7 @@
-const manifestLocation = "../GameAssets/manifest.json"; // if ur developing, make it "../GameAssets/manifest.json"
+const manifestLocation = "https://instel12.github.io/RCUBGT/GameAssets/manifest.json"; // if ur developing, make it "../GameAssets/manifest.json"
 const container = document.getElementById("Container");
 const gameoptions = document.getElementById("GameOptions");
+const menuoptions = document.getElementById("MenuOptions");
 
 particlesJS("particles", {
     particles: {
@@ -19,6 +20,7 @@ LoadHomepage();
 
 function LoadHomepage() {
     gameoptions.style.display = "none";
+    menuoptions.style.display = "flex";
     const container = document.getElementById("Container");
 
     container.srcdoc = `
@@ -100,6 +102,7 @@ loadGames();
 
 async function loadGame(url) {
     gameoptions.style.display = "block";
+    menuoptions.style.display = "none";
     const response = await fetch(url);
     const html = await response.text();
 

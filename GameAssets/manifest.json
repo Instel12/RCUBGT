@@ -1,5 +1,5 @@
 {
-    "BaseURL": "../GameAssets/",
+    "BaseURL": "https://instel12.github.io/RCUBGT/GameAssets/",
     "Games": [
         {
             "Name": "Retro Bowl",
@@ -152,14 +152,24 @@
             "Icon": "SoccerRandom/icon.png"
         },
         {
-            "Name": "Soccer Random",
-            "SuffixURL": "SoccerRandom/index.html",
-            "Icon": "SoccerRandom/icon.png"
-        },
-        {
             "Name": "Volley Random",
             "SuffixURL": "VolleyRandom/index.html",
             "Icon": "VolleyRandom/icon.png"
+        },
+        {
+            "Name": "Getaway Shootout",
+            "SuffixURL": "GetawayShootout/index.html",
+            "Icon": "GetawayShootout/icon.png"
+        },
+        {
+            "Name": "Cluster Rush",
+            "SuffixURL": "ClusterRush/index.html",
+            "Icon": "ClusterRush/icon.png"
+        },
+        {
+            "Name": "Ragdoll Archers",
+            "SuffixURL": "RagdollArchers/index.html",
+            "Icon": "RagdollArchers/icon.png"
         }
     ]
 }
