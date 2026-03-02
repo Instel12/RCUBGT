@@ -175,6 +175,16 @@
             "Name": "Ragdoll Archers",
             "SuffixURL": "RagdollArchers/index.html",
             "Icon": "RagdollArchers/icon.png"
+        },
+        {
+            "Name": "Bloxorz",
+            "SuffixURL": "Bloxorz/index.html",
+            "Icon": "Bloxorz/icon.png"
+        },
+        {
+            "Name": "Bowmasters",
+            "SuffixURL": "Bowmasters/index.html",
+            "Icon": "Bowmasters/icon.png"
         }
     ]
 }
