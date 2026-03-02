@@ -1,4 +1,4 @@
-const manifestLocation = "../GameAssets/manifest.json"; // if ur developing, make it "../GameAssets/manifest.json"
+const manifestLocation = "https://gr4be.github.io/RCUBGT/GameAssets/manifest.json"; // if ur developing, make it "../GameAssets/manifest.json"
 const container = document.getElementById("Container");
 const gameoptions = document.getElementById("GameOptions");
 const menuoptions = document.getElementById("MenuOptions");

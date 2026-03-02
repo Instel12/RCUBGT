@@ -1,5 +1,5 @@
 {
-    "BaseURL": "https://instel12.github.io/RCUBGT/GameAssets/",
+    "BaseURL": "https://gr4be.github.io/RCUBGT/GameAssets/",
     "Games": [
         {
             "Name": "Retro Bowl",
@@ -185,6 +185,36 @@
             "Name": "Bowmasters",
             "SuffixURL": "Bowmasters/index.html",
             "Icon": "Bowmasters/icon.png"
+        },
+        {
+            "Name": "Five Nights at Freddy's",
+            "SuffixURL": "FiveNightsAtFreddys/index.html",
+            "Icon": "FiveNightsAtFreddys/icon.png"
+        },
+        {
+            "Name": "Five Nights at Freddy's 2",
+            "SuffixURL": "FiveNightsAtFreddys2/index.html",
+            "Icon": "FiveNightsAtFreddys2/icon.png"
+        },
+        {
+            "Name": "Five Nights at Freddy's 3",
+            "SuffixURL": "FiveNightsAtFreddys3/index.html",
+            "Icon": "FiveNightsAtFreddys3/icon.png"
+        },
+        {
+            "Name": "Five Nights at Freddy's 4",
+            "SuffixURL": "FiveNightsAtFreddys4/index.html",
+            "Icon": "FiveNightsAtFreddys4/icon.png"
+        },
+        {
+            "Name": "Crossy Road",
+            "SuffixURL": "CrossyRoad/index.html",
+            "Icon": "CrossyRoad/icon.png"
+        },
+        {
+            "Name": "Granny",
+            "SuffixURL": "Granny/index.html",
+            "Icon": "Granny/icon.png"
         }
     ]
 
