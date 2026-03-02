@@ -204,8 +204,11 @@ function loadStorage() {
                 for (const [key, value] of Object.entries(data)) {
                     localStorage.setItem(key, value);
                 }
+<<<<<<< HEAD
 
                 alert("LocalStorage loaded successfully!");
+=======
+>>>>>>> 4952c290b9986b074a4f34e0d923a3fa4653d7eb
             } catch (err) {
                 alert("Error parsing JSON: " + err);
             }
@@ -214,4 +217,8 @@ function loadStorage() {
     };
 
     input.click();
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 4952c290b9986b074a4f34e0d923a3fa4653d7eb
