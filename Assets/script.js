@@ -3,6 +3,9 @@ const container = document.getElementById("Container");
 const gameoptions = document.getElementById("GameOptions");
 const menuoptions = document.getElementById("MenuOptions");
 
+const PageTitle = document.getElementById("PageTitle");
+const PageIcon = document.getElementById("PageIcon");
+
 particlesJS("particles", {
     particles: {
         number: { value: 60, density: { enable: true, value_area: 800 } },
@@ -100,6 +103,47 @@ loadGames();
 `;
 }
 
+function OpenSettings() {
+    container.srcdoc = `<!DOCTYPE html>
+<html lang="en">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<h1>Settings <span style="color:red;">[Beta]</span></h1>
+<h3>Spoofing</h3>
+<input type="text" placeholder="Page Title" value="RCUBGT" id="urlInput">
+<input type="text" placeholder="Favicon URL" value="" id="faviconInput">
+<h3>Other</h3>
+<button onclick="parent.enableAntiClose()">Anti-Close</button>
+<p style="color: gray; font-size: 10px;">This is really ugly right now, I will improve it later. It also doesn't save yet.</p>
+<style>
+body{
+    font-family: "Space Mono", monospace;
+    color: white;
+}
+input{
+border-radius: 0px;
+border: 2px solid black;
+font-family: "Space Mono", monospace;
+color: black;
+}
+</style>
+<script>
+const input = document.getElementById("urlInput");
+input.addEventListener("keydown", (e) => {
+    if(e.key === "Enter"){
+        parent.PageTitle.innerText = input.value;
+    }
+});
+const faviconInput = document.getElementById("faviconInput");
+faviconInput.addEventListener("keydown", (e) => {
+    if(e.key === "Enter"){
+        parent.PageIcon.href = faviconInput.value;
+    }
+});
+</script>
+</html>`
+}
+
 async function loadGame(url) {
     gameoptions.style.display = "block";
     menuoptions.style.display = "none";
@@ -115,4 +159,10 @@ async function loadGame(url) {
 
 function fullscreen() {
     container.requestFullscreen();
+}
+function enableAntiClose() {
+    window.addEventListener("beforeunload", function (e) {
+    e.preventDefault();
+    e.returnValue = "Are you sure you want to leave?";
+});
 }
