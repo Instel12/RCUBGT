@@ -112,6 +112,10 @@ function OpenSettings() {
 <h3>Spoofing</h3>
 <input type="text" placeholder="Page Title" value="RCUBGT" id="urlInput">
 <input type="text" placeholder="Favicon URL" value="" id="faviconInput">
+<h3>Storage</h3>
+<button onclick="parent.dumpStorage()">Backup Storage</button>
+<button onclick="parent.loadStorage()">Load Storage</button>
+<button onclick="parent.localStorage.clear()">Clear Storage</button>
 <h3>Other</h3>
 <button onclick="parent.enableAntiClose()">Anti-Close</button>
 <p style="color: gray; font-size: 10px;">This is really ugly right now, I will improve it later. It also doesn't save yet.</p>
@@ -165,4 +169,47 @@ function enableAntiClose() {
     e.preventDefault();
     e.returnValue = "Are you sure you want to leave?";
 });
+}
+
+function dumpStorage() {
+    const data = Object.fromEntries(Object.entries(localStorage));
+
+    const jsonStr = JSON.stringify(data, null, 2);
+
+    const blob = new Blob([jsonStr], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "RCUBGT Backup.json";
+
+    a.click();
+
+    URL.revokeObjectURL(url);
+}
+
+function loadStorage() {
+    const input = document.createElement("input");
+    input.type = "file";
+    input.accept = "application/json";
+
+    input.onchange = (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.onload = (event) => {
+            try {
+                const data = JSON.parse(event.target.result);
+
+                for (const [key, value] of Object.entries(data)) {
+                    localStorage.setItem(key, value);
+                }
+            } catch (err) {
+                alert("Error parsing JSON: " + err);
+            }
+        };
+        reader.readAsText(file);
+    };
+
+    input.click();
 }
