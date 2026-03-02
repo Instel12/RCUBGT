@@ -127,6 +127,11 @@
             "Icon": "TheImpossibleQuiz/icon.png"
         },
         {
+            "Name": "The Impossible Quiz 2",
+            "SuffixURL": "TheImpossibleQuiz2/index.html",
+            "Icon": "TheImpossibleQuiz2/icon.png"
+        },
+        {
             "Name": "Line Rider",
             "SuffixURL": "LineRider/index.html",
             "Icon": "LineRider/icon.png"
