@@ -27,6 +27,11 @@
             "Icon": "Minecraft188/icon.png"
         },
         {
+            "Name": "Minecraft 1.12.2",
+            "SuffixURL": "Minecraft1122/index.html",
+            "Icon": "Minecraft1122/icon.png"
+        },
+        {
             "Name": "Cookie Clicker",
             "SuffixURL": "CookieClicker/index.html",
             "Icon": "CookieClicker/icon.png"
