@@ -12,6 +12,11 @@
             "Icon": "EscapeRoad/icon.png"
         },
         {
+            "Name": "Escape Road City 2",
+            "SuffixURL": "EscapeRoadCity2/index.html",
+            "Icon": "EscapeRoadCity2/icon.png"
+        },
+        {
             "Name": "Minecraft 1.5.2",
             "SuffixURL": "Minecraft152/index.html",
             "Icon": "Minecraft152/icon.png"
@@ -40,6 +45,16 @@
             "Name": "Dadish",
             "SuffixURL": "Dadish/index.html",
             "Icon": "Dadish/icon.png"
+        },
+        {
+            "Name": "Dadish 2",
+            "SuffixURL": "Dadish2/index.html",
+            "Icon": "Dadish2/icon.png"
+        },
+        {
+            "Name": "Dadish 3",
+            "SuffixURL": "Dadish3/index.html",
+            "Icon": "Dadish3/icon.png"
         },
         {
             "Name": "Superhot",
@@ -220,6 +235,21 @@
             "Name": "Granny",
             "SuffixURL": "Granny/index.html",
             "Icon": "Granny/icon.png"
+        },
+        {
+            "Name": "OvO",
+            "SuffixURL": "OvO/index.html",
+            "Icon": "OvO/icon.png"
+        },
+        {
+            "Name": "OvO 2",
+            "SuffixURL": "OvO2/index.html",
+            "Icon": "OvO2/icon.png"
+        },
+        {
+            "Name": "OvO Dimensions",
+            "SuffixURL": "OvODimensions/index.html",
+            "Icon": "OvODimensions/icon.png"
         }
     ]
 
