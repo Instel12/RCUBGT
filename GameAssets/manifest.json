@@ -1,5 +1,5 @@
 {
-    "BaseURL": "https://Instel12.github.io/RCUBGT/GameAssets/",
+    "BaseURL": "../GameAssets/",
     "Games": [
         {
             "Name": "Retro Bowl",
@@ -125,6 +125,76 @@
             "Name": "Papa's Pizzaria",
             "SuffixURL": "PapasPizzaria/index.html",
             "Icon": "PapasPizzaria/icon.png"
+        },
+        {
+            "Name": "Papas Bakeria",
+            "SuffixURL": "PapasBakeria/index.html",
+            "Icon": "PapasBakeria/icon.png"
+        },
+        {
+            "Name": "Papas Burgeria",
+            "SuffixURL": "PapasBurgeria/index.html",
+            "Icon": "PapasBurgeria/icon.png"
+        },
+        {
+            "Name": "Papas Bakeria",
+            "SuffixURL": "PapasBakeria/index.html",
+            "Icon": "PapasBakeria/icon.png"
+        },
+        {
+            "Name": "Papas Cheeseria",
+            "SuffixURL": "PapasCheeseria/index.html",
+            "Icon": "PapasCheeseria/icon.png"
+        },
+        {
+            "Name": "Papas Cupcakeria",
+            "SuffixURL": "PapasCupcakeria/index.html",
+            "Icon": "PapasCupcakeria/icon.png"
+        },
+        {
+            "Name": "Papas Donuteria",
+            "SuffixURL": "PapasDonuteria/index.html",
+            "Icon": "PapasDonuteria/icon.png"
+        },
+        {
+            "Name": "Papas Freezeria",
+            "SuffixURL": "PapasFreezeria/index.html",
+            "Icon": "PapasFreezeria/icon.png"
+        },
+        {
+            "Name": "Papas Hot Doggeria",
+            "SuffixURL": "PapasHotDoggeria/index.html",
+            "Icon": "PapasHotDoggeria/icon.png"
+        },
+        {
+            "Name": "Papas Pancakeria",
+            "SuffixURL": "PapasPancakeria/index.html",
+            "Icon": "PapasPancakeria/icon.png"
+        },
+        {
+            "Name": "Papas Pastaria",
+            "SuffixURL": "PapasPastaria/index.html",
+            "Icon": "PapasPastaria/icon.png"
+        },
+        {
+            "Name": "Papas Scooperia",
+            "SuffixURL": "PapasScooperia/index.html",
+            "Icon": "PapasScooperia/icon.png"
+        },
+        {
+            "Name": "Papas Sushiria",
+            "SuffixURL": "PapasSushiria/index.html",
+            "Icon": "PapasSushiria/icon.png"
+        },
+        {
+            "Name": "Papas Taco Mia",
+            "SuffixURL": "PapasTacoMia/index.html",
+            "Icon": "PapasTacoMia/icon.png"
+        },
+        {
+            "Name": "Papas Wingeria",
+            "SuffixURL": "PapasWingeria/index.html",
+            "Icon": "PapasWingeria/icon.png"
         },
         {
             "Name": "1v1.lol",
@@ -260,6 +330,41 @@
             "Name": "Five Nights at Winston's",
             "SuffixURL": "FiveNightsAtWinstons/index.html",
             "Icon": "FiveNightsAtWinstons/icon.png"
+        },
+        {
+            "Name": "A Dance of Fire and Ice",
+            "SuffixURL": "ADanceOfFireAndIce/index.html",
+            "Icon": "ADanceOfFireAndIce/icon.png"
+        },
+        {
+            "Name": "Run",
+            "SuffixURL": "Run1/index.html",
+            "Icon": "Run1/icon.png"
+        },
+        {
+            "Name": "Run 2",
+            "SuffixURL": "Run2/index.html",
+            "Icon": "Run2/icon.png"
+        },
+        {
+            "Name": "Run 3",
+            "SuffixURL": "Run3/index.html",
+            "Icon": "Run3/icon.png"
+        },
+        {
+            "Name": "Learn To Fly",
+            "SuffixURL": "LearnToFly/index.html",
+            "Icon": "LearnToFly/icon.jpg"
+        },
+        {
+            "Name": "Learn To Fly 2",
+            "SuffixURL": "LearnToFly2/index.html",
+            "Icon": "LearnToFly2/icon.png"
+        },
+        {
+            "Name": "Learn To Fly 3",
+            "SuffixURL": "LearnToFly3/index.html",
+            "Icon": "LearnToFly3/icon.png"
         }
     ]
 

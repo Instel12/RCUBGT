@@ -6,6 +6,13 @@ const menuoptions = document.getElementById("MenuOptions");
 const PageTitle = document.getElementById("PageTitle");
 const PageIcon = document.getElementById("PageIcon");
 
+const clientver = document.getElementById("clientver");
+const currentver = "0";
+
+if (clientver.innerText !== currentver) {
+    alert("This client is outdated! Please redownload it via the Github Page.");
+}
+
 particlesJS("particles", {
     particles: {
         number: { value: 60, density: { enable: true, value_area: 800 } },
