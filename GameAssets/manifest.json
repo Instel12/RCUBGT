@@ -1,5 +1,5 @@
 {
-    "BaseURL": "../GameAssets/",
+    "BaseURL": "https://instel12.github.io/RCUBGT/GameAssets/GameAssets/",
     "Games": [
         {
             "Name": "Retro Bowl",
