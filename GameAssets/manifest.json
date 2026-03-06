@@ -255,6 +255,11 @@
             "Name": "OvO Dimensions",
             "SuffixURL": "OvODimensions/index.html",
             "Icon": "OvODimensions/icon.png"
+        },
+        {
+            "Name": "Five Nights at Winston's",
+            "SuffixURL": "FiveNightsAtWinstons/index.html",
+            "Icon": "FiveNightsAtWinstons/icon.png"
         }
     ]
 
