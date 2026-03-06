@@ -7,7 +7,30 @@ const PageTitle = document.getElementById("PageTitle");
 const PageIcon = document.getElementById("PageIcon");
 
 const clientver = document.getElementById("clientver");
-const currentver = "0";
+const currentver = "21415";
+let overallver = "error";
+
+async function getCommitCount(owner, repo) {
+  const res = await fetch(
+    `https://api.github.com/repos/${owner}/${repo}/commits?per_page=1`
+  );
+
+  const link = res.headers.get("link");
+
+  if (!link) {
+    const data = await res.json();
+    return data.length;
+  }
+
+  const match = link.match(/page=(\d+)>; rel="last"/);
+  return match ? Number(match[1]) : 1;
+}
+
+getCommitCount("facebook", "react").then(count => {
+  overallver = count;
+});
+
+getCommitCount("Instel12", "RCUBGT")
 
 if (clientver.innerText !== currentver) {
     alert("This client is outdated! Please redownload it via the Github Page.");
@@ -125,7 +148,12 @@ function OpenSettings() {
 <button onclick="parent.localStorage.clear()">Clear Storage</button>
 <h3>Other</h3>
 <button onclick="parent.enableAntiClose()">Anti-Close</button>
-<p style="color: gray; font-size: 10px;">This is really ugly right now, I will improve it later. It also doesn't save yet.</p>
+<h3>Version</h3>
+<p style="color: gray; font-size: 12px;">Target Client Version: `+currentver+`</p>
+<p style="color: gray; font-size: 12px;">Current Client Version: `+clientver.textContent+`</p>
+<p style="color: gray; font-size: 12px;">Current Overall Version: `+overallver+`</p>
+<div style="background-color:#262626;width:100%;height:2px;"></div>
+<p style="color: red; font-size: 12px;">Settings is not currently finished, its is really ugly and doesnt save.</p>
 <style>
 body{
     font-family: "Space Mono", monospace;
