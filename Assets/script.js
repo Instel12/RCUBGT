@@ -1,4 +1,11 @@
-const manifestLocation = "https://Instel12.github.io/RCUBGT/GameAssets/manifest.json"; // if ur developing, make it "../GameAssets/manifest.json"
+const manifestsingle = "https://Instel12.github.io/RCUBGT/GameAssets/manifest.json";
+const manifestfs = "../GameAssets/manifest.json";
+
+const baseurlsingle = "https://instel12.github.io/RCUBGT/GameAssets/";
+const baseurlfs = "../GameAssets/";
+
+let manifestLocation = "";
+let finalbaseurl = "";
 const container = document.getElementById("Container");
 const gameoptions = document.getElementById("GameOptions");
 const menuoptions = document.getElementById("MenuOptions");
@@ -7,13 +14,28 @@ const PageTitle = document.getElementById("PageTitle");
 const PageIcon = document.getElementById("PageIcon");
 
 const clientver = document.getElementById("clientver");
-const currentver = "21415";
-let overallver = "error";
+const currentver = "";
+let overallver = "no idea 💀";
+
+if (localpref.textContent == "false") {
+    manifestLocation = manifestsingle;
+    finalbaseurl = baseurlsingle;
+    console.log("metadata: multifile");
+}
+else{
+    manifestLocation = manifestfs;
+    finalbaseurl = baseurlfs;
+    console.log("metadata: singlefile");
+}
 
 async function getCommitCount(owner, repo) {
   const res = await fetch(
     `https://api.github.com/repos/${owner}/${repo}/commits?per_page=1`
   );
+
+  if (!res.ok) {
+    throw new Error(`GitHub API error: ${res.status}`);
+  }
 
   const link = res.headers.get("link");
 
@@ -23,14 +45,15 @@ async function getCommitCount(owner, repo) {
   }
 
   const match = link.match(/page=(\d+)>; rel="last"/);
-  return match ? Number(match[1]) : 1;
+  overallver = Number(match[1]);
 }
 
-getCommitCount("facebook", "react").then(count => {
-  overallver = count;
-});
+getCommitCount("Instel12", "RCUBGT");
 
-getCommitCount("Instel12", "RCUBGT")
+async function getver() {
+    var responce = await fetch("https://instel12.github.io/RCUBGT/version");
+    currentver = await responce.text();
+}
 
 if (clientver.innerText !== currentver) {
     alert("This client is outdated! Please redownload it via the Github Page.");
@@ -70,6 +93,11 @@ function LoadHomepage() {
             font-family: "Space Mono", monospace;
         }
 
+        input{
+            border: none;
+            width: 100%;
+        }
+
         .game-list {
             display: flex;
             gap: 24px;
@@ -97,16 +125,21 @@ function LoadHomepage() {
 </head>
 <body>
 
+<input type="text" placeholder="Search" id="searchbar">
+<br><br>
 <div class="game-list" id="gameList"></div>
 
 <script>
+const searchthing = document.getElementById("searchbar");
+
 async function loadGames() {
     const response = await fetch("` + manifestLocation +`");
     const data = await response.json();
 
-    const baseURL = data.BaseURL;
+    const baseURL = "` + finalbaseurl +`";
     const list = document.getElementById("gameList");
 
+    list.innerHTML = "";
     data.Games.forEach(game => {
         const gameURL = baseURL + game.SuffixURL;
         const iconURL = baseURL + game.Icon;
@@ -121,11 +154,18 @@ async function loadGames() {
 
         div.onclick = () => parent.loadGame(gameURL);
 
-        list.appendChild(div);
+        if (game.Name.toLowerCase().includes(searchthing.value.toLowerCase())) {
+            list.appendChild(div);
+        }
     });
 }
 
 loadGames();
+
+searchthing.addEventListener("input", function(event){
+    loadGames();
+});
+
 </script>
 
 </body>
@@ -151,7 +191,7 @@ function OpenSettings() {
 <h3>Version</h3>
 <p style="color: gray; font-size: 12px;">Target Client Version: `+currentver+`</p>
 <p style="color: gray; font-size: 12px;">Current Client Version: `+clientver.textContent+`</p>
-<p style="color: gray; font-size: 12px;">Current Overall Version: `+overallver+`</p>
+<p style="color: gray; font-size: 12px;">Current Commit: `+overallver+`</p>
 <div style="background-color:#262626;width:100%;height:2px;"></div>
 <p style="color: red; font-size: 12px;">Settings is not currently finished, its is really ugly and doesnt save.</p>
 <style>
