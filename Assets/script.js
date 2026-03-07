@@ -419,14 +419,16 @@ async function getCommitCount(owner, repo) {
 
 getCommitCount("Instel12", "RCUBGT");
 
-async function getver() {
-    var responce = await fetch("https://instel12.github.io/RCUBGT/version");
+async function checkVersion() {
+    const responce = await fetch("https://instel12.github.io/RCUBGT/version");
     currentver = await responce.text();
+
+    if (clientver.innerText !== currentver) {
+        alert("This client is outdated! Please redownload it via the Github Page.");
+    }
 }
 
-if (clientver.innerText !== currentver) {
-    alert("This client is outdated! Please redownload it via the Github Page.");
-}
+checkVersion();
 
 particlesJS("particles", {
     particles: {
