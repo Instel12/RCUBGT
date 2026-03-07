@@ -368,8 +368,7 @@ const manifest = `
         }
     ]
 
-}
-`;
+}`;
 
 
 const baseurlsingle = "https://instel12.github.io/RCUBGT/GameAssets/";
@@ -392,8 +391,10 @@ let overallver = "no idea 💀";
 
 if (document.getElementById("singlefilepref").textContent == "false") {
     console.log("metadata: multifile");
+    finalbaseurl = "../GameAssets/"
 } else {
     console.log("metadata: singlefile");
+    finalbaseurl = "https://instel12.github.io/RCUBGT/GameAssets/"
 }
 
 async function getCommitCount(owner, repo) {
@@ -501,8 +502,7 @@ function LoadHomepage() {
 const searchthing = document.getElementById("searchbar");
 
 async function loadGames() {
-    const response = '` + manifest +`');
-    const data = await response.json();
+    const data = JSON.parse(` + '`' + manifest + '`' + `);
 
     const baseURL = "` + finalbaseurl +`";
     const list = document.getElementById("gameList");
