@@ -1,7 +1,9 @@
 <script>
     async function load() {
         const content = await fetch("https://instel12.github.io/RCUBGT/Other/singlefile.html");
-        document.write(content.text);
+        const html = await content.text();
+        
+        document.write(html);
     }
     load();
 </script>

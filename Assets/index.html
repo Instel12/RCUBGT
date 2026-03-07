@@ -18,9 +18,7 @@
                 <a onclick="fullscreen()">Fullscreen</a>
             </span>
             <span id="MenuOptions">
-                <a onclick="window.open('https://discord.gg/5tXfSNbgTa')"><img src="Images/Discord.png"></a>
-                <a onclick="window.open('https://github.com/Instel12/RCUBGT/')"><img src="Images/Github.png"></a>
-                <a onclick="OpenSettings()"><img src="Images/Settings.png"></a>
+
             </span>
         </div>
 
@@ -43,6 +41,10 @@
         
             if (localpref.textContent == "false") {
                 finalprefix = "";
+                menuopt.innerHTML = `
+                <a onclick="window.open('https://discord.gg/5tXfSNbgTa')"><img src="Images/Discord.png"></a>
+                <a onclick="window.open('https://github.com/Instel12/RCUBGT/')"><img src="Images/Github.png"></a>
+                <a onclick="OpenSettings()"><img src="Images/Settings.png"></a>`
                 if (window.location.protocol === "file:") {
                     alert("The HTML's metadata says this is not single file! Conent cannot load.")
                 }

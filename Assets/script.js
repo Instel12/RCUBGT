@@ -1,4 +1,4 @@
-const manifestsingle = "https://Instel12.github.io/RCUBGT/GameAssets/manifest.json";
+const manifestsingle = "https://instel12.github.io/RCUBGT/GameAssets/manifest.json";
 const manifestfs = "../GameAssets/manifest.json";
 
 const baseurlsingle = "https://instel12.github.io/RCUBGT/GameAssets/";
