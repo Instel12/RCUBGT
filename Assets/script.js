@@ -420,7 +420,7 @@ async function getCommitCount(owner, repo) {
 getCommitCount("Instel12", "RCUBGT");
 
 async function checkVersion() {
-    const responce = await fetch("https://instel12.github.io/RCUBGT/version");
+    const responce = await fetch("https://raw.githubusercontent.com/Instel12/RCUBGT/refs/heads/main/version");
     currentver = await responce.text();
 
     if (clientver.innerText !== currentver) {
