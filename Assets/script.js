@@ -17,7 +17,7 @@ const clientver = document.getElementById("clientver");
 const currentver = "";
 let overallver = "no idea 💀";
 
-if (localpref.textContent == "false") {
+if (document.getElementById("singlefilepref").textContent == "false") {
     manifestLocation = manifestsingle;
     finalbaseurl = baseurlsingle;
     console.log("metadata: multifile");
