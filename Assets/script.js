@@ -1,8 +1,10 @@
 const manifestsingle = "https://instel12.github.io/RCUBGT/GameAssets/manifest.json";
-const manifestfs = window.location.origin + "/GameAssets/manifest.json";
 
+const manifestfs = window.location.origin + "/RCUBGT/GameAssets/manifest.json";
 const baseurlsingle = "https://instel12.github.io/RCUBGT/GameAssets/";
-const baseurlfs = window.location.origin + "/GameAssets/";
+
+const baseurlfs = window.location.origin + "/RCUBGT/GameAssets/";
+
 let manifestLocation = "";
 let finalbaseurl = "";
 const container = document.getElementById("Container");
@@ -13,15 +15,15 @@ const PageTitle = document.getElementById("PageTitle");
 const PageIcon = document.getElementById("PageIcon");
 
 const clientver = document.getElementById("clientver");
-const currentver = "";
+
+let currentver = "";
 let overallver = "no idea 💀";
 
 if (document.getElementById("singlefilepref").textContent == "false") {
     manifestLocation = manifestsingle;
     finalbaseurl = baseurlsingle;
     console.log("metadata: multifile");
-}
-else{
+} else {
     manifestLocation = manifestfs;
     finalbaseurl = baseurlfs;
     console.log("metadata: singlefile");
