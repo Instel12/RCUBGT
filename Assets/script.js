@@ -1,9 +1,8 @@
 const manifestsingle = "https://instel12.github.io/RCUBGT/GameAssets/manifest.json";
-const manifestfs = "../GameAssets/manifest.json";
+const manifestfs = window.location.origin + "/GameAssets/manifest.json";
 
 const baseurlsingle = "https://instel12.github.io/RCUBGT/GameAssets/";
-const baseurlfs = "../GameAssets/";
-
+const baseurlfs = window.location.origin + "/GameAssets/";
 let manifestLocation = "";
 let finalbaseurl = "";
 const container = document.getElementById("Container");
