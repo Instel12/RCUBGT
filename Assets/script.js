@@ -62,6 +62,11 @@ const manifest = `
             "Icon": "Dadish3/icon.png"
         },
         {
+            "Name": "Dadish 3D",
+            "SuffixURL": "Dadish3d/index.html",
+            "Icon": "Dadish3d/icon.png"
+        },
+        {
             "Name": "Superhot",
             "SuffixURL": "Superhot/index.html",
             "Icon": "Superhot/icon.jpg"
@@ -127,72 +132,72 @@ const manifest = `
             "Icon": "PapasPizzaria/icon.png"
         },
         {
-            "Name": "Papas Bakeria",
+            "Name": "Papa's Bakeria",
             "SuffixURL": "PapasBakeria/index.html",
             "Icon": "PapasBakeria/icon.png"
         },
         {
-            "Name": "Papas Burgeria",
+            "Name": "Papa's Burgeria",
             "SuffixURL": "PapasBurgeria/index.html",
             "Icon": "PapasBurgeria/icon.png"
         },
         {
-            "Name": "Papas Bakeria",
+            "Name": "Papa's Bakeria",
             "SuffixURL": "PapasBakeria/index.html",
             "Icon": "PapasBakeria/icon.png"
         },
         {
-            "Name": "Papas Cheeseria",
+            "Name": "Papa's Cheeseria",
             "SuffixURL": "PapasCheeseria/index.html",
             "Icon": "PapasCheeseria/icon.png"
         },
         {
-            "Name": "Papas Cupcakeria",
+            "Name": "Papa's Cupcakeria",
             "SuffixURL": "PapasCupcakeria/index.html",
             "Icon": "PapasCupcakeria/icon.png"
         },
         {
-            "Name": "Papas Donuteria",
+            "Name": "Papa's Donuteria",
             "SuffixURL": "PapasDonuteria/index.html",
             "Icon": "PapasDonuteria/icon.png"
         },
         {
-            "Name": "Papas Freezeria",
+            "Name": "Papa's Freezeria",
             "SuffixURL": "PapasFreezeria/index.html",
             "Icon": "PapasFreezeria/icon.png"
         },
         {
-            "Name": "Papas Hot Doggeria",
+            "Name": "Papa's Hot Doggeria",
             "SuffixURL": "PapasHotDoggeria/index.html",
             "Icon": "PapasHotDoggeria/icon.png"
         },
         {
-            "Name": "Papas Pancakeria",
+            "Name": "Papa's Pancakeria",
             "SuffixURL": "PapasPancakeria/index.html",
             "Icon": "PapasPancakeria/icon.png"
         },
         {
-            "Name": "Papas Pastaria",
+            "Name": "Papa's Pastaria",
             "SuffixURL": "PapasPastaria/index.html",
             "Icon": "PapasPastaria/icon.png"
         },
         {
-            "Name": "Papas Scooperia",
+            "Name": "Papa's Scooperia",
             "SuffixURL": "PapasScooperia/index.html",
             "Icon": "PapasScooperia/icon.png"
         },
         {
-            "Name": "Papas Sushiria",
+            "Name": "Papa's Sushiria",
             "SuffixURL": "PapasSushiria/index.html",
             "Icon": "PapasSushiria/icon.png"
         },
         {
-            "Name": "Papas Taco Mia",
+            "Name": "Papa's Taco Mia",
             "SuffixURL": "PapasTacoMia/index.html",
             "Icon": "PapasTacoMia/icon.png"
         },
         {
-            "Name": "Papas Wingeria",
+            "Name": "Papa's Wingeria",
             "SuffixURL": "PapasWingeria/index.html",
             "Icon": "PapasWingeria/icon.png"
         },
@@ -467,6 +472,7 @@ function LoadHomepage() {
         input{
             border: none;
             width: 100%;
+            font-family: "Space Mono", monospace;
         }
 
         .game-list {
@@ -524,10 +530,14 @@ async function loadGames() {
 
         div.onclick = () => parent.loadGame(gameURL);
 
-        if (game.Name.toLowerCase().includes(searchthing.value.toLowerCase())) {
+        if (normalize(game.Name.toLowerCase()).includes(normalize(searchthing.value.toLowerCase()))) {
             list.appendChild(div);
         }
     });
+}
+
+function normalize(str) {
+    return str.toLowerCase().replace(/[^a-z0-9]/g, ""); // keep only letters & numbers
 }
 
 loadGames();
