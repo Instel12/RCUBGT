@@ -115,13 +115,13 @@ const manifest = `
             "Name": "Snow Rider 3D",
             "SuffixURL": "SnowRider3D/index.html",
             "Icon": "SnowRider3D/icon.png"
-        },
-        {
-            "Name": "Five Nights at Epstein's",
-            "SuffixURL": "FiveNightsAtEpsteins/index.html",
-            "Icon": "FiveNightsAtEpsteins/icon.png"
-        },
-        {
+        },`+
+        // {
+        //     "Name": "Five Nights at Epstein's",
+        //     "SuffixURL": "FiveNightsAtEpsteins/index.html",
+        //     "Icon": "FiveNightsAtEpsteins/icon.png"
+        // },
+        `{
             "Name": "Plants vs Zombies",
             "SuffixURL": "PlantsVsZombies/index.html",
             "Icon": "PlantsVsZombies/icon.png"
@@ -370,6 +370,31 @@ const manifest = `
             "Name": "Learn To Fly 3",
             "SuffixURL": "LearnToFly3/index.html",
             "Icon": "LearnToFly3/icon.png"
+        },
+        {
+            "Name": "2048",
+            "SuffixURL": "2048/index.html",
+            "Icon": "2048/icon.png"
+        },
+        {
+            "Name": "Grand Theft Auto: Vice City",
+            "SuffixURL": "GtaViceCity/index.html",
+            "Icon": "GtaViceCity/icon.png"
+        },` +
+        // {
+        //     "Name": "Raft",
+        //     "SuffixURL": "Raft/index.html",
+        //     "Icon": "Raft/icon.png"
+        // },
+        `{
+            "Name": "Raft Wars",
+            "SuffixURL": "RaftWars/index.html",
+            "Icon": "RaftWars/icon.png"
+        },
+        {
+            "Name": "Raft Wars 2",
+            "SuffixURL": "RaftWars2/index.html",
+            "Icon": "RaftWars2/icon.png"
         }
     ]
 
