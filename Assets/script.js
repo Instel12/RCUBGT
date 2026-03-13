@@ -375,18 +375,18 @@ const manifest = `
             "Name": "2048",
             "SuffixURL": "2048/index.html",
             "Icon": "2048/icon.png"
-        },
-        {
-            "Name": "Grand Theft Auto: Vice City",
-            "SuffixURL": "GtaViceCity/index.html",
-            "Icon": "GtaViceCity/icon.png"
         },` +
         // {
-        //     "Name": "Raft",
-        //     "SuffixURL": "Raft/index.html",
-        //     "Icon": "Raft/icon.png"
+        //     "Name": "Grand Theft Auto: Vice City",
+        //     "SuffixURL": "GtaViceCity/index.html",
+        //     "Icon": "GtaViceCity/icon.png"
         // },
         `{
+            "Name": "Raft",
+            "SuffixURL": "Raft/index.html",
+            "Icon": "Raft/icon.png"
+        },
+        {
             "Name": "Raft Wars",
             "SuffixURL": "RaftWars/index.html",
             "Icon": "RaftWars/icon.png"
@@ -405,8 +405,11 @@ const baseurlsingle = "https://instel12.github.io/RCUBGT/GameAssets/";
 
 const baseurlfs = "../GameAssets/";
 
+let borders = "border-radius: 0px;";
+
 let manifestLocation = "";
 let finalbaseurl = "";
+let finalbaseurl4assets = "";
 const container = document.getElementById("Container");
 const gameoptions = document.getElementById("GameOptions");
 const menuoptions = document.getElementById("MenuOptions");
@@ -421,10 +424,12 @@ let overallver = "no idea 💀";
 
 if (document.getElementById("singlefilepref").textContent == "false") {
     console.log("metadata: multifile");
-    finalbaseurl = "../GameAssets/"
+    finalbaseurl = "../GameAssets/";
+    finalbaseurl4assets = "";
 } else {
     console.log("metadata: singlefile");
-    finalbaseurl = "https://instel12.github.io/RCUBGT/GameAssets/"
+    finalbaseurl = "https://instel12.github.io/RCUBGT/GameAssets/";
+    finalbaseurl4assets = "https://instel12.github.io/RCUBGT/Assets/";
 }
 
 async function getCommitCount(owner, repo) {
@@ -498,6 +503,7 @@ function LoadHomepage() {
             border: none;
             width: 100%;
             font-family: "Space Mono", monospace;
+`           +borders+`
         }
 
         .game-list {
@@ -507,21 +513,30 @@ function LoadHomepage() {
         }
 
         .game {
+            overflow: hidden;
             width: 160px;
             background: #ffffff;
             padding: 12px;
             text-align: center;
             cursor: pointer;
-        }
+`           +borders+`
+    transition: transform 0.15s ease;
+
+            }
+
+.game:hover{
+    transform: scale(1.06);
+}
 
         .game img {
             width: 100%;
             height: 120px;
             object-fit: contain;
             margin-bottom: 8px;
+            `+borders+`
         }
         .GameIMG{
-            
+            `+borders+`
         }
     </style>
 </head>
@@ -593,6 +608,13 @@ function OpenSettings() {
 <button onclick="parent.localStorage.clear()">Clear Storage</button>
 <h3>Other</h3>
 <button onclick="parent.enableAntiClose()">Anti-Close</button>
+<h3>Theme</h3>
+<select id="theme">
+    <option value="Space">Space</option>
+    <option value="Desert">Desert</option>
+    <option value="Polys">Polys</option>
+    <option value="Liquid">Liquid</option>
+</select>
 <h3>Version</h3>
 <p style="color: gray; font-size: 12px;">Target Client Version: `+currentver+`</p>
 <p style="color: gray; font-size: 12px;">Current Client Version: `+clientver.textContent+`</p>
@@ -605,13 +627,23 @@ body{
     color: white;
 }
 input{
-border-radius: 0px;
-border: 2px solid black;
+`+borders+`
+border: none;
 font-family: "Space Mono", monospace;
 color: black;
 }
+button{
+border:none;
+}
+select{
+border: none;
+}
 </style>
 <script>
+document.getElementById("theme").onchange = function () {
+  parent.settheme(this.value);
+};
+
 const input = document.getElementById("urlInput");
 input.addEventListener("keydown", (e) => {
     if(e.key === "Enter"){
@@ -626,6 +658,33 @@ faviconInput.addEventListener("keydown", (e) => {
 });
 </script>
 </html>`
+}
+
+function settheme(name) {
+    console.log("set theme to " + name + " jsyk")
+    if (name == "Space") {
+        document.body.style.backgroundImage = "";
+        document.body.style.backgroundColor = "black";
+        borders = "border-radius: 0px;";
+        document.getElementById("particles").style.display = "block";
+    }
+    if (name == "Polys") {
+        document.body.style.backgroundImage = "url('" + finalbaseurl4assets+ "Images/Backgrounds/polys.png')";
+        borders = "border-radius: 0px;";
+        document.getElementById("particles").style.display = "block";
+    }
+    if (name == "Liquid") {
+        document.body.style.backgroundImage = "url('" + finalbaseurl4assets+ "Images/Backgrounds/liquid.avif')";
+        borders = "border-radius: 9px;";
+        document.getElementById("particles").style.display = "none";
+    }
+    if (name == "Desert") {
+        document.body.style.backgroundImage = "url('" + finalbaseurl4assets+ "Images/Backgrounds/desert.jpg')";
+        borders = "border-radius: 9px;";
+        document.getElementById("particles").style.display = "block";
+    }
+
+    document.getElementsByClassName("Banner")[0].style = borders;
 }
 
 async function loadGame(url) {
