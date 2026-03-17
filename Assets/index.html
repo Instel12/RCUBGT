@@ -46,7 +46,10 @@
                 <a onclick="window.open('https://github.com/Instel12/RCUBGT/')"><img src="Images/Github.png"></a>
                 <a onclick="OpenSettings()"><img src="Images/Settings.png"></a>`
                 if (window.location.protocol === "file:") {
-                    alert("The HTML's metadata says this is not single file! Conent cannot load.")
+                    alert("The HTML's metadata says this is not single file! This is not recommended.")
+                }
+                if (window.location.protocol === "data,") {
+                    alert("Most features cannot load in a 'data,' URL. It is very highly recommended to run this another way.")
                 }
             }
             else{

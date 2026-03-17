@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="//static-web-pool-production.pool.miniclippt.com/site/master_173/css/main-mc.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="//static-web-pool-production.pool.miniclippt.com/site/master_173/css/game-style.css">
+    <script src="//static-web-pool-production.pool.miniclippt.com/site/master_173/js/require.js"></script>
+
+
+    <script type="text/javascript">
+        alert("this is experemental, it may not load at all!")
+        /* Disable browser default behaviours for space and arrow keys */
+        window.addEventListener("keydown", function(e) {
+            // space and arrow keys
+            if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1 && e.target == document.body) {
+                e.preventDefault();
+            }
+        }, false);
+
+        requirejs.config({
+            baseUrl: "//static-web-pool-production.pool.miniclippt.com/site/master_173/js",
+            config: {
+                'settings': {
+                    'img_root' : "//static-web-pool-production.pool.miniclippt.com/site/master_173/img",
+                    'css_root' : "//static-web-pool-production.pool.miniclippt.com/site/master_173/css",
+                    'js_root' : "//static-web-pool-production.pool.miniclippt.com/site/master_173/js"
+                }
+            },
+            waitSeconds: 60,
+            shim: {
+                'miniclip': {
+                    exports: 'MC'
+                }
+            },
+            paths: {
+                jquery: '//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min',
+                miniclip: "//static-web-pool-production.pool.miniclippt.com/site/master_173/js/mc-sdk"
+            },
+            packages: [
+                {   name: 'game',
+                    location: "//static-web-pool-production.pool.miniclippt.com/game/wasm_guest_1.0.0_73372/js",
+                    main: 'application'
+                }]
+        });
+
+        requirejs(['game'], function(Application) {
+            Application.init({
+                'environment': "production",
+                'platform': 'miniclip',
+                'app_id': 17,
+                'base_url': "//static-web-pool-production.pool.miniclippt.com/game",
+                'config_base_url': "//v34-web-live-config.pool.miniclippt.com",
+                'client_version': "wasm_guest_1.0.0_73372",
+                                'access_token': false,
+                                                                'config_id_game': 0,
+                'config_id_promo': 0,
+                                'syndicated': false,
+                
+                'payment_endpoint': "https://prod-8ballpool-emscripten-site-service.pool.miniclippt.com"
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <div id="container">
+        <div id="canvas-container">
+            <canvas class="engine" id="engine" oncontextmenu="event.preventDefault()"></canvas>
+            <div id="loadingBox"></div>
+        </div>
+        <a id="modal-payment-link" class="fancybox fancybox.iframe" href="/pay/">Iframe</a>
+    </div>
+</body>
+</html>
+
+<script src="https://instel12.github.io/RCUBGT/GameAssets/api.js"></script>

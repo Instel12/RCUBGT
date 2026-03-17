@@ -395,6 +395,26 @@ const manifest = `
             "Name": "Raft Wars 2",
             "SuffixURL": "RaftWars2/index.html",
             "Icon": "RaftWars2/icon.png"
+        },
+        {
+            "Name": "Tomb of the Mask",
+            "SuffixURL": "TombOfTheMask/index.html",
+            "Icon": "TombOfTheMask/icon.png"
+        },
+        {
+            "Name": "Slow Roads",
+            "SuffixURL": "SlowRoads/index.html",
+            "Icon": "SlowRoads/icon.png"
+        },
+        {
+            "Name": "8 Ball Pool",
+            "SuffixURL": "8BallPool/index.html",
+            "Icon": "8BallPool/icon.jpg"
+        },
+        {
+            "Name": "Friday Night Funkin",
+            "SuffixURL": "FridayNightFunkin/index.html",
+            "Icon": "FridayNightFunkin/icon.jpg"
         }
     ]
 
