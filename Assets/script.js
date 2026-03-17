@@ -415,6 +415,21 @@ const manifest = `
             "Name": "Friday Night Funkin",
             "SuffixURL": "FridayNightFunkin/index.html",
             "Icon": "FridayNightFunkin/icon.jpg"
+        },
+        {
+            "Name": "Paper.io",
+            "SuffixURL": "PaperIo/index.html",
+            "Icon": "PaperIo/icon.png"
+        },
+        {
+            "Name": "Jetpack Joyride",
+            "SuffixURL": "JetpackJoyride/index.html",
+            "Icon": "JetpackJoyride/icon.png"
+        },
+        {
+            "Name": "Fruit Ninja",
+            "SuffixURL": "FruitNinja/index.html",
+            "Icon": "FruitNinja/icon.png"
         }
     ]
 
