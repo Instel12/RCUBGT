@@ -430,6 +430,16 @@ const manifest = `
             "Name": "Fruit Ninja",
             "SuffixURL": "FruitNinja/index.html",
             "Icon": "FruitNinja/icon.png"
+        },
+        {
+            "Name": "Drive Mad",
+            "SuffixURL": "DriveMad/index.html",
+            "Icon": "DriveMad/icon.png"
+        },
+        {
+            "Name": "Bad Piggies",
+            "SuffixURL": "BadPiggies/index.html",
+            "Icon": "BadPiggies/icon.webp"
         }
     ]
 
@@ -637,6 +647,10 @@ function OpenSettings() {
 <h3>Spoofing</h3>
 <input type="text" placeholder="Page Title" value="RCUBGT" id="urlInput">
 <input type="text" placeholder="Favicon URL" value="" id="faviconInput">
+<p>
+<button onclick="setCloke('Home', 'https://ssl.gstatic.com/classroom/favicon.png');"><img style="height:20px;" src="https://ssl.gstatic.com/classroom/favicon.png"></button>
+<button onclick="setCloke('Clever', 'https://www.clever.com/wp-content/uploads/2023/06/cropped-Favicon-512px-32x32.png');"><img style="height:20px;" src="https://www.clever.com/wp-content/uploads/2023/06/cropped-Favicon-512px-32x32.png"></button>
+<button onclick="setCloke('IXL | Math, Language Arts, Science, Social Studies, and Spanish', 'https://www.ixl.com/ixl-favicon.png');"><img style="height:20px;" src="https://www.ixl.com/ixl-favicon.png"></button>
 <h3>Storage</h3>
 <button onclick="parent.dumpStorage()">Backup Storage</button>
 <button onclick="parent.loadStorage()">Load Storage</button>
@@ -691,6 +705,13 @@ faviconInput.addEventListener("keydown", (e) => {
         parent.PageIcon.href = faviconInput.value;
     }
 });
+function setCloke(title, icon) {
+    input.value = title;
+    faviconInput.value = icon;
+            parent.PageIcon.href = faviconInput.value;
+        parent.PageTitle.innerText = input.value;
+
+}
 </script>
 </html>`
 }
