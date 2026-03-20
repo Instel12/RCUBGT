@@ -440,6 +440,16 @@ const manifest = `
             "Name": "Bad Piggies",
             "SuffixURL": "BadPiggies/index.html",
             "Icon": "BadPiggies/icon.webp"
+        },
+        {
+            "Name": "Cut the Rope",
+            "SuffixURL": "CutTheRope/index.html",
+            "Icon": "CutTheRope/icon.png"
+        },
+        {
+            "Name": "Poly Track",
+            "SuffixURL": "PolyTrack/index.html",
+            "Icon": "PolyTrack/icon.webp"
         }
     ]
 
@@ -651,6 +661,7 @@ function OpenSettings() {
 <button onclick="setCloke('Home', 'https://ssl.gstatic.com/classroom/favicon.png');"><img style="height:20px;" src="https://ssl.gstatic.com/classroom/favicon.png"></button>
 <button onclick="setCloke('Clever', 'https://www.clever.com/wp-content/uploads/2023/06/cropped-Favicon-512px-32x32.png');"><img style="height:20px;" src="https://www.clever.com/wp-content/uploads/2023/06/cropped-Favicon-512px-32x32.png"></button>
 <button onclick="setCloke('IXL | Math, Language Arts, Science, Social Studies, and Spanish', 'https://www.ixl.com/ixl-favicon.png');"><img style="height:20px;" src="https://www.ixl.com/ixl-favicon.png"></button>
+<button onclick="setCloke('VEXcode V5', 'https://codev5.vex.com/static/img/icons/vexfavicon.ico');"><img style="height:20px;" src="https://codev5.vex.com/static/img/icons/vexfavicon.ico"></button>
 <h3>Storage</h3>
 <button onclick="parent.dumpStorage()">Backup Storage</button>
 <button onclick="parent.loadStorage()">Load Storage</button>

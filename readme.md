@@ -1,9 +1,10 @@
 # RCUBGT
 yuh, so, RCUBGT stands for Really Cool Unblocked Games, Trust.
 
-What **WILL** have:
+What had:
  - Single File
  - Cloaking
+ - Games
 
 I just need games at school which is why this is gonna be released so early 💀
 
