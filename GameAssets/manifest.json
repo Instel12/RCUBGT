@@ -593,8 +593,25 @@
             "Name": "Dumb Ways to Die",
             "SuffixURL": "DumbWaysToDie/index.html",
             "Icon": "DumbWaysToDie/icon.png",
-            "Tags": ["Survival", "Port"]
+            "Tags": ["Survival", "Port", "Flash"]
+        },
+        {
+            "Name": "Big Tower Tiny Square",
+            "SuffixURL": "BigTowerTinySquare/index.html",
+            "Icon": "BigTowerTinySquare/icon.png",
+            "Tags": ["Platformer"]
+        },
+        {
+            "Name": "RocketPult",
+            "SuffixURL": "RocketPult/index.html",
+            "Icon": "RocketPult/icon.png",
+            "Tags": ["Casual"]
+        },
+        {
+            "Name": "Gunspin",
+            "SuffixURL": "Gunspin/index.html",
+            "Icon": "Gunspin/icon.png",
+            "Tags": ["Casual"]
         }
     ]
-
 }
