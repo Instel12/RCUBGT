@@ -8,15 +8,12 @@
     <body>
         <!-- This is the html metadata, it doesnt have to do with the page itsself -->
         <span id="auth" style="display: none;">yep, authenticated</span> <!-- dont change this line at all if you dont want an annoying ahh watermark on all of the games -->
-        <span id="clientver" style="display: none;">1.2.0</span>
+        <span id="clientver" style="display: none;">1.3.0</span>
         <span id="singlefilepref" style="display: none;">true</span>
         <!-- ehh, enough of the metadata -->
 
-        <div class="Banner" style="display: flex; justify-content: space-between; align-items: center;">
+        <div class="Banner">
             <a onclick="LoadHomepage()">RCUBGT</a>
-            <span id="GameOptions">
-                <a onclick="fullscreen()">Fullscreen</a>
-            </span>
             <span id="MenuOptions">
 
             </span>
@@ -34,27 +31,24 @@
             const js = document.createElement("script");
 
             const menuopt = document.getElementById("MenuOptions");
+            const gameopt = document.getElementById("GameOptions");
 
             let finalprefix = "";
 
             css.rel = "stylesheet";
         
+            if (window.location.protocol === "file:") {
+                alert("It seems you're using the file protocol, most features will not work unless on http or https")
+            }
+            if (window.location.protocol === "data,") {
+                alert("It seems you're using the data protocol, most features will not work unless on http or https")
+            }
+
             if (localpref.textContent == "false") {
                 finalprefix = "";
-                menuopt.innerHTML = `
-                <a onclick="window.open('https://discord.gg/5tXfSNbgTa')"><img src="Images/Discord.png"></a>
-                <a onclick="window.open('https://github.com/Instel12/RCUBGT/')"><img src="Images/Github.png"></a>
-                <a onclick="OpenSettings()"><img src="Images/Settings.png"></a>`
-                if (window.location.protocol === "file:") {
-                    alert("The HTML's metadata says this is not single file! Conent cannot load.")
-                }
             }
             else{
                 finalprefix = "https://instel12.github.io/RCUBGT/Assets/";
-                menuopt.innerHTML = `
-                <a onclick="window.open('https://discord.gg/5tXfSNbgTa')"><img src="https://instel12.github.io/RCUBGT/Assets/Images/Discord.png"></a>
-                <a onclick="window.open('https://github.com/Instel12/RCUBGT/')"><img src="https://instel12.github.io/RCUBGT/Assets/Images/Github.png"></a>
-                <a onclick="OpenSettings()"><img src="https://instel12.github.io/RCUBGT/Assets/Images/Settings.png"></a>`;
             }
 
             js.src = finalprefix + "script.js";

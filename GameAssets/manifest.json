@@ -1,0 +1,552 @@
+{
+    "Tags": [
+        "Sports",
+        "Racing",
+        "Platformer",
+        "Casual",
+        "Skill",
+        "Puzzle",
+        "Horror",
+        "Survival",
+        "Port",
+        "Flash",
+        "Two Player"
+    ],
+    "Games": [
+        {
+            "Name": "Retro Bowl",
+            "SuffixURL": "RetroBowl/index.html",
+            "Icon": "RetroBowl/icon.jpg",
+            "Tags": ["Sports"]
+        },
+        {
+            "Name": "Escape Road",
+            "SuffixURL": "EscapeRoad/index.html",
+            "Icon": "EscapeRoad/icon.png",
+            "Tags": ["Survival"]
+        },
+        {
+            "Name": "Escape Road City 2",
+            "SuffixURL": "EscapeRoadCity2/index.html",
+            "Icon": "EscapeRoadCity2/icon.png",
+            "Tags": ["Survival"]
+        },
+        {
+            "Name": "Minecraft 1.5.2",
+            "SuffixURL": "Minecraft152/index.html",
+            "Icon": "Minecraft152/icon.png",
+            "Tags": ["Survival", "Port"]
+        },
+        {
+            "Name": "Minecraft 1.8.8",
+            "SuffixURL": "Minecraft188/index.html",
+            "Icon": "Minecraft188/icon.png",
+            "Tags": ["Survival", "Port"]
+        },
+        {
+            "Name": "Minecraft 1.12.2",
+            "SuffixURL": "Minecraft1122/index.html",
+            "Icon": "Minecraft1122/icon.png",
+            "Tags": ["Survival", "Port"]
+        },
+        {
+            "Name": "Cookie Clicker",
+            "SuffixURL": "CookieClicker/index.html",
+            "Icon": "CookieClicker/icon.png",
+            "Tags": ["Casual"]
+        },
+        {
+            "Name": "Bitlife",
+            "SuffixURL": "Bitlife/index.html",
+            "Icon": "Bitlife/icon.webp",
+            "Tags": ["Casual"]
+        },
+        {
+            "Name": "Gorilla Tag",
+            "SuffixURL": "GorillaTag/index.html",
+            "Icon": "GorillaTag/icon.webp",
+            "Tags": ["Platformer", "Survival", "Port"]
+        },
+        {
+            "Name": "Dadish",
+            "SuffixURL": "Dadish/index.html",
+            "Icon": "Dadish/icon.png",
+            "Tags": ["Platformer"]
+        },
+        {
+            "Name": "Dadish 2",
+            "SuffixURL": "Dadish2/index.html",
+            "Icon": "Dadish2/icon.png",
+            "Tags": ["Platformer"]
+        },
+        {
+            "Name": "Dadish 3",
+            "SuffixURL": "Dadish3/index.html",
+            "Icon": "Dadish3/icon.png",
+            "Tags": ["Platformer"]
+        },
+        {
+            "Name": "Dadish 3D",
+            "SuffixURL": "Dadish3d/index.html",
+            "Icon": "Dadish3d/icon.png",
+            "Tags": ["Platformer"]
+        },
+        {
+            "Name": "Superhot",
+            "SuffixURL": "Superhot/index.html",
+            "Icon": "Superhot/icon.jpg",
+            "Tags": ["Survival", "Skill"]
+        },
+        {
+            "Name": "Idle Breakout",
+            "SuffixURL": "IdleBreakout/index.html",
+            "Icon": "IdleBreakout/icon.png",
+            "Tags": ["Casual"]
+        },
+        {
+            "Name": "Block Blast",
+            "SuffixURL": "BlockBlast/index.html",
+            "Icon": "BlockBlast/icon.webp",
+            "Tags": ["Puzzle", "Casual"]
+        },
+        {
+            "Name": "Baldi's Basics CR",
+            "SuffixURL": "BaldisBasicsClassicRemastered/index.html",
+            "Icon": "BaldisBasicsClassicRemastered/icon.png",
+            "Tags": ["Survival", "Horror", "Port"]
+        },
+        {
+            "Name": "Baldi's Basics Plus",
+            "SuffixURL": "BaldisBasicsPlus/index.html",
+            "Icon": "BaldisBasicsPlus/icon.png",
+            "Tags": ["Survival", "Horror", "Port"]
+        },
+        {
+            "Name": "Tattletail",
+            "SuffixURL": "Tattletail/index.html",
+            "Icon": "Tattletail/icon.png",
+            "Tags": ["Horror", "Port"]
+        },
+        {
+            "Name": "Schoolboy Runaway",
+            "SuffixURL": "SchoolboyRunaway/index.html",
+            "Icon": "SchoolboyRunaway/icon.png",
+            "Tags": ["Survival", "Port"]
+        },
+        {
+            "Name": "Survival Race",
+            "SuffixURL": "SurvivalRace/index.html",
+            "Icon": "SurvivalRace/icon.png",
+            "Tags": ["Racing", "Survival"]
+        },
+        {
+            "Name": "Buckshot Roulette",
+            "SuffixURL": "BuckshotRoulette/index.html",
+            "Icon": "BuckshotRoulette/icon.png",
+            "Tags": ["Horror", "Casual", "Port"]
+        },
+        {
+            "Name": "Snow Rider 3D",
+            "SuffixURL": "SnowRider3D/index.html",
+            "Icon": "SnowRider3D/icon.png",
+            "Tags": ["Survival"]
+        },
+        {
+            "Name": "Plants vs Zombies",
+            "SuffixURL": "PlantsVsZombies/index.html",
+            "Icon": "PlantsVsZombies/icon.png",
+            "Tags": ["Casual", "Survival", "Port", "Flash"]
+        },
+        {
+            "Name": "Papa's Pizzaria",
+            "SuffixURL": "PapasPizzaria/index.html",
+            "Icon": "PapasPizzaria/icon.png",
+            "Tags": ["Casual", "Survival", "Flash"]
+        },
+        {
+            "Name": "Papa's Bakeria",
+            "SuffixURL": "PapasBakeria/index.html",
+            "Icon": "PapasBakeria/icon.png",
+            "Tags": ["Casual", "Survival", "Flash"]
+        },
+        {
+            "Name": "Papa's Burgeria",
+            "SuffixURL": "PapasBurgeria/index.html",
+            "Icon": "PapasBurgeria/icon.png",
+            "Tags": ["Casual", "Survival", "Flash"]
+        },
+        {
+            "Name": "Papa's Bakeria",
+            "SuffixURL": "PapasBakeria/index.html",
+            "Icon": "PapasBakeria/icon.png",
+            "Tags": ["Casual", "Survival", "Flash"]
+        },
+        {
+            "Name": "Papa's Cheeseria",
+            "SuffixURL": "PapasCheeseria/index.html",
+            "Icon": "PapasCheeseria/icon.png",
+            "Tags": ["Casual", "Survival", "Flash"]
+        },
+        {
+            "Name": "Papa's Cupcakeria",
+            "SuffixURL": "PapasCupcakeria/index.html",
+            "Icon": "PapasCupcakeria/icon.png",
+            "Tags": ["Casual", "Survival", "Flash"]
+        },
+        {
+            "Name": "Papa's Donuteria",
+            "SuffixURL": "PapasDonuteria/index.html",
+            "Icon": "PapasDonuteria/icon.png",
+            "Tags": ["Casual", "Survival", "Flash"]
+        },
+        {
+            "Name": "Papa's Freezeria",
+            "SuffixURL": "PapasFreezeria/index.html",
+            "Icon": "PapasFreezeria/icon.png",
+            "Tags": ["Casual", "Survival", "Flash"]
+        },
+        {
+            "Name": "Papa's Hot Doggeria",
+            "SuffixURL": "PapasHotDoggeria/index.html",
+            "Icon": "PapasHotDoggeria/icon.png",
+            "Tags": ["Casual", "Survival", "Flash"]
+        },
+        {
+            "Name": "Papa's Pancakeria",
+            "SuffixURL": "PapasPancakeria/index.html",
+            "Icon": "PapasPancakeria/icon.png",
+            "Tags": ["Casual", "Survival", "Flash"]
+        },
+        {
+            "Name": "Papa's Pastaria",
+            "SuffixURL": "PapasPastaria/index.html",
+            "Icon": "PapasPastaria/icon.png",
+            "Tags": ["Casual", "Survival", "Flash"]
+        },
+        {
+            "Name": "Papa's Scooperia",
+            "SuffixURL": "PapasScooperia/index.html",
+            "Icon": "PapasScooperia/icon.png",
+            "Tags": ["Casual", "Survival", "Flash"]
+        },
+        {
+            "Name": "Papa's Sushiria",
+            "SuffixURL": "PapasSushiria/index.html",
+            "Icon": "PapasSushiria/icon.png",
+            "Tags": ["Casual", "Survival", "Flash"]
+        },
+        {
+            "Name": "Papa's Taco Mia",
+            "SuffixURL": "PapasTacoMia/index.html",
+            "Icon": "PapasTacoMia/icon.png",
+            "Tags": ["Casual", "Survival", "Flash"]
+        },
+        {
+            "Name": "Papa's Wingeria",
+            "SuffixURL": "PapasWingeria/index.html",
+            "Icon": "PapasWingeria/icon.png",
+            "Tags": ["Casual", "Survival", "Flash"]
+        },
+        {
+            "Name": "1v1.lol",
+            "SuffixURL": "1v1Lol/index.html",
+            "Icon": "1v1Lol/icon.png",
+            "Tags": ["Survival", "Skill"]
+        },
+        {
+            "Name": "Geomatry Dash Lite",
+            "SuffixURL": "GeomatryDashLite/index.html",
+            "Icon": "GeomatryDashLite/icon.png",
+            "Tags": ["Casual", "Skill", "Port"]
+        },
+        {
+            "Name": "Slope",
+            "SuffixURL": "Slope/index.html",
+            "Icon": "Slope/icon.png",
+            "Tags": ["Survival", "Skill"]
+        },
+        {
+            "Name": "The Impossible Quiz",
+            "SuffixURL": "TheImpossibleQuiz/index.html",
+            "Icon": "TheImpossibleQuiz/icon.png",
+            "Tags": ["Puzzle", "Skill", "Flash"]
+        },
+        {
+            "Name": "The Impossible Quiz 2",
+            "SuffixURL": "TheImpossibleQuiz2/index.html",
+            "Icon": "TheImpossibleQuiz2/icon.png",
+            "Tags": ["Puzzle", "Skill", "Flash"]
+        },
+        {
+            "Name": "Line Rider",
+            "SuffixURL": "LineRider/index.html",
+            "Icon": "LineRider/icon.png",
+            "Tags": ["Casual", "Flash"]
+        },
+        {
+            "Name": "Brotato",
+            "SuffixURL": "Brotato/index.html",
+            "Icon": "Brotato/icon.png",
+            "Tags": ["Casual", "Survival", "Port"]
+        },
+        {
+            "Name": "Amazing Strange Rope Police",
+            "SuffixURL": "AmazingStrangeRopePolice/index.html",
+            "Icon": "AmazingStrangeRopePolice/icon.png",
+            "Tags": ["Casual"]
+        },
+        {
+            "Name": "Basket Random",
+            "SuffixURL": "BasketRandom/index.html",
+            "Icon": "BasketRandom/icon.png",
+            "Tags": ["Sports"]
+        },
+        {
+            "Name": "Boxing Random",
+            "SuffixURL": "BoxingRandom/index.html",
+            "Icon": "BoxingRandom/icon.png",
+            "Tags": ["Sports", "Two Player", "Skill"]
+        },
+        {
+            "Name": "Soccer Random",
+            "SuffixURL": "SoccerRandom/index.html",
+            "Icon": "SoccerRandom/icon.png",
+            "Tags": ["Sports", "Two Player", "Skill"]
+        },
+        {
+            "Name": "Volley Random",
+            "SuffixURL": "VolleyRandom/index.html",
+            "Icon": "VolleyRandom/icon.png",
+            "Tags": ["Sports", "Two Player", "Skill"]
+        },
+        {
+            "Name": "Getaway Shootout",
+            "SuffixURL": "GetawayShootout/index.html",
+            "Icon": "GetawayShootout/icon.png",
+            "Tags": ["Two Player", "Skill"]
+        },
+        {
+            "Name": "Cluster Rush",
+            "SuffixURL": "ClusterRush/index.html",
+            "Icon": "ClusterRush/icon.png",
+            "Tags": ["Casual"]
+        },
+        {
+            "Name": "Ragdoll Archers",
+            "SuffixURL": "RagdollArchers/index.html",
+            "Icon": "RagdollArchers/icon.png",
+            "Tags": ["Survival", "Casual"]
+        },
+        {
+            "Name": "Bloxorz",
+            "SuffixURL": "Bloxorz/index.html",
+            "Icon": "Bloxorz/icon.png",
+            "Tags": ["Puzzle", "Flash"]
+        },
+        {
+            "Name": "Bowmasters",
+            "SuffixURL": "Bowmasters/index.html",
+            "Icon": "Bowmasters/icon.png",
+            "Tags": ["Casual", "Port"]
+        },
+        {
+            "Name": "Five Nights at Freddy's",
+            "SuffixURL": "FiveNightsAtFreddys/index.html",
+            "Icon": "FiveNightsAtFreddys/icon.png",
+            "Tags": ["Horror", "Survival", "Port"]
+        },
+        {
+            "Name": "Five Nights at Freddy's 2",
+            "SuffixURL": "FiveNightsAtFreddys2/index.html",
+            "Icon": "FiveNightsAtFreddys2/icon.png",
+            "Tags": ["Horror", "Survival", "Port"]
+        },
+        {
+            "Name": "Five Nights at Freddy's 3",
+            "SuffixURL": "FiveNightsAtFreddys3/index.html",
+            "Icon": "FiveNightsAtFreddys3/icon.png",
+            "Tags": ["Horror", "Survival", "Port"]
+        },
+        {
+            "Name": "Five Nights at Freddy's 4",
+            "SuffixURL": "FiveNightsAtFreddys4/index.html",
+            "Icon": "FiveNightsAtFreddys4/icon.png",
+            "Tags": ["Horror", "Survival", "Port"]
+        },
+        {
+            "Name": "Crossy Road",
+            "SuffixURL": "CrossyRoad/index.html",
+            "Icon": "CrossyRoad/icon.png",
+            "Tags": ["Casual"]
+        },
+        {
+            "Name": "Granny",
+            "SuffixURL": "Granny/index.html",
+            "Icon": "Granny/icon.png",
+            "Tags": ["Horror", "Port"]
+        },
+        {
+            "Name": "OvO",
+            "SuffixURL": "OvO/index.html",
+            "Icon": "OvO/icon.png",
+            "Tags": ["Platformer"]
+        },
+        {
+            "Name": "OvO 2",
+            "SuffixURL": "OvO2/index.html",
+            "Icon": "OvO2/icon.png",
+            "Tags": ["Platformer"]
+        },
+        {
+            "Name": "OvO Dimensions",
+            "SuffixURL": "OvODimensions/index.html",
+            "Icon": "OvODimensions/icon.png",
+            "Tags": ["Platformer"]
+        },
+        {
+            "Name": "Five Nights at Winston's",
+            "SuffixURL": "FiveNightsAtWinstons/index.html",
+            "Icon": "FiveNightsAtWinstons/icon.png",
+            "Tags": ["Horror", "Survival"]
+        },
+        {
+            "Name": "A Dance of Fire and Ice",
+            "SuffixURL": "ADanceOfFireAndIce/index.html",
+            "Icon": "ADanceOfFireAndIce/icon.png",
+            "Tags": ["Skill", "Casual"]
+        },
+        {
+            "Name": "Run",
+            "SuffixURL": "Run1/index.html",
+            "Icon": "Run1/icon.png",
+            "Tags": ["Survival", "Casual", "Flash"]
+        },
+        {
+            "Name": "Run 2",
+            "SuffixURL": "Run2/index.html",
+            "Icon": "Run2/icon.png",
+            "Tags": ["Survival", "Casual", "Flash"]
+        },
+        {
+            "Name": "Run 3",
+            "SuffixURL": "Run3/index.html",
+            "Icon": "Run3/icon.png",
+            "Tags": ["Survival", "Casual"]
+        },
+        {
+            "Name": "Learn To Fly",
+            "SuffixURL": "LearnToFly/index.html",
+            "Icon": "LearnToFly/icon.jpg",
+            "Tags": ["Casual", "Flash"]
+        },
+        {
+            "Name": "Learn To Fly 2",
+            "SuffixURL": "LearnToFly2/index.html",
+            "Icon": "LearnToFly2/icon.png",
+            "Tags": ["Casual", "Flash"]
+        },
+        {
+            "Name": "Learn To Fly 3",
+            "SuffixURL": "LearnToFly3/index.html",
+            "Icon": "LearnToFly3/icon.png",
+            "Tags": ["Casual", "Flash"]
+        },
+        {
+            "Name": "2048",
+            "SuffixURL": "2048/index.html",
+            "Icon": "2048/icon.png",
+            "Tags": ["Puzzle", "Casual"]
+        },
+        {
+            "Name": "Grand Theft Auto: Vice City",
+            "SuffixURL": "GtaViceCity/index.html",
+            "Icon": "GtaViceCity/icon.png",
+            "Tags": ["Port", "Survival"]
+        },
+        {
+            "Name": "Raft",
+            "SuffixURL": "Raft/index.html",
+            "Icon": "Raft/icon.png",
+            "Tags": ["Casual", "Port"]
+        },
+        {
+            "Name": "Raft Wars",
+            "SuffixURL": "RaftWars/index.html",
+            "Icon": "RaftWars/icon.png",
+            "Tags": ["Casual", "Flash"]
+        },
+        {
+            "Name": "Raft Wars 2",
+            "SuffixURL": "RaftWars2/index.html",
+            "Icon": "RaftWars2/icon.png",
+            "Tags": ["Casual", "Flash"]
+        },
+        {
+            "Name": "Tomb of the Mask",
+            "SuffixURL": "TombOfTheMask/index.html",
+            "Icon": "TombOfTheMask/icon.png",
+            "Tags": ["Puzzle"]
+        },
+        {
+            "Name": "Slow Roads",
+            "SuffixURL": "SlowRoads/index.html",
+            "Icon": "SlowRoads/icon.png",
+            "Tags": ["Casual"]
+        },
+        {
+            "Name": "8 Ball Pool",
+            "SuffixURL": "8BallPool/index.html",
+            "Icon": "8BallPool/icon.jpg",
+            "Tags": ["Sports", "Casual"]
+        },
+        {
+            "Name": "Friday Night Funkin",
+            "SuffixURL": "FridayNightFunkin/index.html",
+            "Icon": "FridayNightFunkin/icon.jpg",
+            "Tags": ["Survival", "Skill"]
+        },
+        {
+            "Name": "Paper.io",
+            "SuffixURL": "PaperIo/index.html",
+            "Icon": "PaperIo/icon.png",
+            "Tags": ["Casual", "Survival"]
+        },
+        {
+            "Name": "Jetpack Joyride",
+            "SuffixURL": "JetpackJoyride/index.html",
+            "Icon": "JetpackJoyride/icon.png",
+            "Tags": ["Casual", "Port"]
+        },
+        {
+            "Name": "Fruit Ninja",
+            "SuffixURL": "FruitNinja/index.html",
+            "Icon": "FruitNinja/icon.png",
+            "Tags": ["Casual", "Port"]
+        },
+        {
+            "Name": "Drive Mad",
+            "SuffixURL": "DriveMad/index.html",
+            "Icon": "DriveMad/icon.png",
+            "Tags": ["Puzzle", "Casual"]
+        },
+        {
+            "Name": "Bad Piggies",
+            "SuffixURL": "BadPiggies/index.html",
+            "Icon": "BadPiggies/icon.webp",
+            "Tags": ["Puzzle", "Casual"]
+        },
+        {
+            "Name": "Cut the Rope",
+            "SuffixURL": "CutTheRope/index.html",
+            "Icon": "CutTheRope/icon.png",
+            "Tags": ["Puzzle", "Casual"]
+        },
+        {
+            "Name": "Poly Track",
+            "SuffixURL": "PolyTrack/index.html",
+            "Icon": "PolyTrack/icon.webp",
+            "Tags": ["Racing"]
+        }
+    ]
+
+}
