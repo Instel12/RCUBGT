@@ -38,7 +38,12 @@
             css.rel = "stylesheet";
         
             if (window.location.protocol === "file:") {
-                alert("It seems you're using the file protocol, most features will not work unless on http or https")
+                if (localpref.textContent == "true") {
+                    alert("It seems you're using the file protocol, expect some bugs.")
+                }
+                else{
+                    alert("It seems you're using the file protocol, while the file is not marked as single file. Due to CORS, you cannot download the manifest which makes this useless.")
+                }
             }
             if (window.location.protocol === "data,") {
                 alert("It seems you're using the data protocol, most features will not work unless on http or https")

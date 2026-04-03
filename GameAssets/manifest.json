@@ -582,6 +582,18 @@
             "SuffixURL": "Amaze/index.html",
             "Icon": "Amaze/icon.png",
             "Tags": ["Puzzle", "Casual"]
+        },
+        {
+            "Name": "Sandboxels",
+            "SuffixURL": "Sandboxels/index.html",
+            "Icon": "Sandboxels/icon.png",
+            "Tags": ["Casual"]
+        },
+        {
+            "Name": "Dumb Ways to Die",
+            "SuffixURL": "DumbWaysToDie/index.html",
+            "Icon": "DumbWaysToDie/icon.png",
+            "Tags": ["Survival", "Port"]
         }
     ]
 

@@ -350,6 +350,10 @@ function settheme(name) {
     document.getElementsByClassName("Banner")[0].style = borders;
 }
 
+function showError(mesage) {
+    container.srcdoc = mesage;
+}
+
 async function loadGame(url) {
     if (localpref.textContent == "false") {
         menuopt.innerHTML = `
