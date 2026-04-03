@@ -8,7 +8,6 @@ let manifestLocation = "";
 let finalbaseurl = "";
 let finalbaseurl4assets = "";
 const container = document.getElementById("Container");
-const gameoptions = document.getElementById("GameOptions");
 const menuoptions = document.getElementById("MenuOptions");
 
 const PageTitle = document.getElementById("PageTitle");
