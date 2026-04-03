@@ -25651,20 +25651,7 @@
                     }, {
                         key: "_checkBlocking",
                         value: (aL = ue(le.mark(function e() {
-                            var t, n;
-                            return le.wrap(function(e) {
-                                for (; ; )
-                                    switch (e.prev = e.next) {
-                                    case 0:
-                                        t = this._gameData,
-                                        n = 0 <= this._topDomain.indexOf("gamedistribution.com"),
-                                        n = void 0 === this._gameData.dmain || this._gameData.dmain || n,
-                                        (t.bloc_gard && !0 === t.bloc_gard.enabled || !n) && this._redirectToBlocking(!1, !n);
-                                    case 7:
-                                    case "end":
-                                        return e.stop()
-                                    }
-                            }, e, this)
+
                         })),
                         function() {
                             return aL.apply(this, arguments)
@@ -25672,59 +25659,9 @@
                         )
                     }, {
                         key: "_blockDirectTokenURLEmbedding",
-                        value: function() {
-                            var e = this._checkTokenGameUrl()
-                              , t = new wE
-                              , n = "html5.gamedistribution.com" !== pe(document.referrer).host
-                              , e = e && !I4.SDKExistsOnUpperFrame && 0 < t.get("depth.value") && n;
-                            return e && null != (t = this._gameData) && null != (n = t.directTokenUse) && n.enabled && ("to-loader" === (t = null == (t = this._gameData) || null == (n = t.directTokenUse) ? void 0 : n.behavior) ? this._redirectToLoaderFrame() : "to-blocked-page" === t && this._redirectToBlocking(!0)),
-                            {
-                                blocked: e
-                            }
-                        }
+                        
                     }, {
-                        key: "_redirectToBlocking",
-                        value: function(t) {
-                            var n = this
-                              , r = 1 < arguments.length && void 0 !== arguments[1] && arguments[1]
-                              , i = (this.msgrt.send("blocked"),
-                            this._gameData);
-                            setTimeout(ue(le.mark(function e() {
-                                return le.wrap(function(e) {
-                                    for (; ; )
-                                        switch (e.prev = e.next) {
-                                        case 0:
-                                            if (t)
-                                                return e.prev = 1,
-                                                e.next = 4,
-                                                n.adInstance._send_atom_event("token-blocked");
-                                            e.next = 9;
-                                            break;
-                                        case 4:
-                                            e.next = 9;
-                                            break;
-                                        case 6:
-                                            e.prev = 6,
-                                            e.t0 = e.catch(1),
-                                            console.log("Could not send dump.token-blocked", e.t0);
-                                        case 9:
-                                            window.location.href = "https://html5.api.gamedistribution.com/blocked.html?".concat(Je.stringify({
-                                                domain: n._parentDomain,
-                                                id: i.gameId,
-                                                img: n._get_game_thumbnail_url(),
-                                                title: i.title,
-                                                unregistered: r,
-                                                utm_source: n._parentDomain,
-                                                utm_medium: (null == i ? void 0 : i.slug) || (null == i ? void 0 : i.title) || (null == i ? void 0 : i.gameId) || "unknown",
-                                                utm_campaign: "block-and-redirect"
-                                            }));
-                                        case 10:
-                                        case "end":
-                                            return e.stop()
-                                        }
-                                }, e, null, [[1, 6]])
-                            })), 100)
-                        }
+                        
                     }, {
                         key: "_redirectToLoaderFrame",
                         value: function() {
