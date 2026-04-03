@@ -8,9 +8,9 @@
         "Puzzle",
         "Horror",
         "Survival",
+        "Two Player",
         "Port",
-        "Flash",
-        "Two Player"
+        "Flash"
     ],
     "Games": [
         {
@@ -546,6 +546,42 @@
             "SuffixURL": "PolyTrack/index.html",
             "Icon": "PolyTrack/icon.webp",
             "Tags": ["Racing"]
+        },
+        {
+            "Name": "Bloons Tower Defence 1",
+            "SuffixURL": "BloonsTowerDefence1/index.html",
+            "Icon": "BloonsTowerDefence1/icon.png",
+            "Tags": ["Survival", "Casual", "Flash"]
+        },
+        {
+            "Name": "Bloons Tower Defence 2",
+            "SuffixURL": "BloonsTowerDefence2/index.html",
+            "Icon": "BloonsTowerDefence2/icon.png",
+            "Tags": ["Survival", "Casual", "Flash"]
+        },
+        {
+            "Name": "Bloons Tower Defence 3",
+            "SuffixURL": "BloonsTowerDefence3/index.html",
+            "Icon": "BloonsTowerDefence3/icon.webp",
+            "Tags": ["Survival", "Casual", "Flash"]
+        },
+        {
+            "Name": "Bloons Tower Defence 4",
+            "SuffixURL": "BloonsTowerDefence4/index.html",
+            "Icon": "BloonsTowerDefence4/icon.png",
+            "Tags": ["Survival", "Casual", "Flash"]
+        },
+        {
+            "Name": "Bloons Tower Defence 5",
+            "SuffixURL": "BloonsTowerDefence5/index.html",
+            "Icon": "BloonsTowerDefence5/icon.png",
+            "Tags": ["Survival", "Casual", "Flash"]
+        },
+        {
+            "Name": "Amaze!",
+            "SuffixURL": "Amaze/index.html",
+            "Icon": "Amaze/icon.png",
+            "Tags": ["Puzzle", "Casual"]
         }
     ]
 
