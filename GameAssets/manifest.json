@@ -612,6 +612,12 @@
             "SuffixURL": "Gunspin/index.html",
             "Icon": "Gunspin/icon.png",
             "Tags": ["Casual"]
+        },
+        {
+            "Name": "Gladihoppers",
+            "SuffixURL": "Gladihoppers/index.html",
+            "Icon": "Gladihoppers/icon.png",
+            "Tags": ["Skill", "Casual"]
         }
     ]
 }
