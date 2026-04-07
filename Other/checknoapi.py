@@ -1,5 +1,7 @@
 import os
 
+issues = 0
+
 script_dir = os.path.dirname(os.path.abspath(__file__))
 base_dir = os.path.join(script_dir, "..", "GameAssets")
 
@@ -19,3 +21,7 @@ for folder in os.listdir(base_dir):
 
     if '<script src="https://instel12.github.io/RCUBGT/Assets/api/api.js"></script>' not in content:
         print(folder)
+        issues += 1
+
+if issues == 0:
+    print("ur good")

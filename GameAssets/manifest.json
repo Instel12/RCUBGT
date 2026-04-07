@@ -631,6 +631,30 @@
             "SuffixURL": "BuildNowGG/index.html",
             "Icon": "BuildNowGG/icon.png",
             "Tags": ["Skill", "Survival"]
+        },
+        {
+            "Name": "Happy Wheels",
+            "SuffixURL": "HappyWheels/index.html",
+            "Icon": "HappyWheels/icon.png",
+            "Tags": ["Casual", "Flash", "Platformer"]
+        },
+        {
+            "Name": "Achievement Unlocked",
+            "SuffixURL": "AchievementUnlocked/index.html",
+            "Icon": "AchievementUnlocked/icon.png",
+            "Tags": ["Casual", "Puzzle", "Flash"]
+        },
+        {
+            "Name": "Achievement Unlocked 2",
+            "SuffixURL": "AchievementUnlocked2/index.html",
+            "Icon": "AchievementUnlocked2/icon.png",
+            "Tags": ["Casual", "Puzzle", "Flash"]
+        },
+        {
+            "Name": "Achievement Unlocked 3",
+            "SuffixURL": "AchievementUnlocked3/index.html",
+            "Icon": "AchievementUnlocked3/icon.png",
+            "Tags": ["Casual", "Puzzle", "Flash"]
         }
     ]
 }
