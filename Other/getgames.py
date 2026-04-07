@@ -15,4 +15,4 @@ print("```\n# ALL TOOLS\n```")
 for item in all_items:
     if "Tools" in item.get("Tags", []):
         print(item.get("Name", "Unnamed Game"))
-print("```")
+print("```\nTotal:",len(all_items))

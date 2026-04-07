@@ -621,7 +621,7 @@
             "Tags": ["Skill", "Casual"]
         },
         {
-            "Name": "AI Chatbot",
+            "Name": "AI Chatbox",
             "SuffixURL": "AI/index.html",
             "Icon": "AI/icon.png",
             "Tags": ["Tools"]
