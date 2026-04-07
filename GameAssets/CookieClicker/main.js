@@ -1335,11 +1335,11 @@ if (App && new URL(window.location.href).searchParams.get('modless')) Game.modle
 Game.local=LOCAL;
 if (App) Game.local=true;
 Game.resPath='';
-if (!App && !Game.local && window.location.href.indexOf('orteil.dashnet.org')!=-1)
-{
-	Game.resPath=('//'+location.host+location.pathname).replace('orteil.dashnet.org','cdn.dashnet.org');
-	if (Game.resPath.slice(-1)!='/') Game.resPath+='/';
-}
+// if (!App && !Game.local && window.location.href.indexOf('orteil.dashnet.org')!=-1)
+// {
+// 	Game.resPath=('//'+location.host+location.pathname).replace('orteil.dashnet.org','cdn.dashnet.org');
+// 	if (Game.resPath.slice(-1)!='/') Game.resPath+='/';
+// }
 
 
 Game.Launch=function()
@@ -2035,14 +2035,6 @@ Game.Launch=function()
 		if (typeof PRELOAD!=='undefined') Game.Loader.loaded=PRELOAD(Game.Init);
 		else Game.Loader.loaded=callback;
 		Game.Loader.Load(['filler.png']);
-	}
-	Game.ErrorFrame=function()
-	{
-		// l('offGameMessage').innerHTML=
-		// '<div class="title">Oops. Wrong address!</div>'+
-		// '<div>It looks like you\'re accessing Cookie Clicker from another URL than the official one.<br>'+
-		// 'You can <a href="//orteil.dashnet.org/cookieclicker/" target="_blank">play Cookie Clicker over here</a>!<br>'+
-		// '<small>(If for any reason, you are unable to access the game on the official URL, you can also try this <a href="//cookieclicker.eu/cookieclicker/" target="_blank">secondary URL</a>.)</small></div>';
 	}
 	Game.timedout=false;
 	Game.Timeout=function()
