@@ -147,7 +147,7 @@ localStorageSet=function(key,str)
 
 var ajax=function(url,callback)
 {
-	if (Game.local) return false;
+	if (true) return false;
 	var xhr=new XMLHttpRequest();
 	if (!xhr){return false;}
 	xhr.onreadystatechange=function()
@@ -174,7 +174,7 @@ DataDir='https://orteil.dashnet.org/data/';
 
 var getJson=function(url,callback,error)
 {
-	if (Game.local) return false;
+	if (true) return false;
 	var xhr=new XMLHttpRequest();
 	if (!xhr){return false;}
 	xhr.onreadystatechange=function()
@@ -898,7 +898,7 @@ var Loader=function()//asset-loading system
 			if (this.assetsLoading.indexOf(assets[i])==-1 && this.assetsLoaded.indexOf(assets[i])==-1)
 			{
 				var img=new Image();
-				if (!Game.local) img.crossOrigin='anonymous';
+				if (!true) img.crossOrigin='anonymous';
 				img.alt=assets[i];
 				img.onload=bind(this,this.onLoad);
 				this.assets[assets[i]]=img;
@@ -912,7 +912,7 @@ var Loader=function()//asset-loading system
 	{
 		if (!this.assets[old]) this.Load([old]);
 		var img=new Image();
-		if (!Game.local) img.crossOrigin='anonymous';
+		if (!true) img.crossOrigin='anonymous';
 		if (newer.indexOf('/')!=-1)/*newer.indexOf('http')!=-1 || newer.indexOf('https')!=-1)*/ img.src=newer;
 		else img.src=this.domain+newer;
 		img.alt=newer;
@@ -1335,11 +1335,11 @@ if (App && new URL(window.location.href).searchParams.get('modless')) Game.modle
 Game.local=LOCAL;
 if (App) Game.local=true;
 Game.resPath='';
-// if (!App && !Game.local && window.location.href.indexOf('orteil.dashnet.org')!=-1)
-// {
-// 	Game.resPath=('//'+location.host+location.pathname).replace('orteil.dashnet.org','cdn.dashnet.org');
-// 	if (Game.resPath.slice(-1)!='/') Game.resPath+='/';
-// }
+if (!App && !true && window.location.href.indexOf('orteil.dashnet.org')!=-1)
+{
+	Game.resPath=('//'+location.host+location.pathname).replace('orteil.dashnet.org','cdn.dashnet.org');
+	if (Game.resPath.slice(-1)!='/') Game.resPath+='/';
+}
 
 
 Game.Launch=function()
@@ -2035,6 +2035,14 @@ Game.Launch=function()
 		if (typeof PRELOAD!=='undefined') Game.Loader.loaded=PRELOAD(Game.Init);
 		else Game.Loader.loaded=callback;
 		Game.Loader.Load(['filler.png']);
+	}
+	Game.ErrorFrame=function()
+	{
+		l('offGameMessage').innerHTML=
+		'<div class="title">Oops. Wrong address!</div>'+
+		'<div>It looks like you\'re accessing Cookie Clicker from another URL than the official one.<br>'+
+		'You can <a href="//orteil.dashnet.org/cookieclicker/" target="_blank">play Cookie Clicker over here</a>!<br>'+
+		'<small>(If for any reason, you are unable to access the game on the official URL, you can also try this <a href="//cookieclicker.eu/cookieclicker/" target="_blank">secondary URL</a>.)</small></div>';
 	}
 	Game.timedout=false;
 	Game.Timeout=function()
@@ -9299,7 +9307,7 @@ Game.Launch=function()
 			
 			Game.Loader.waitForLoad([img,imgAddons],function(){
 				//accessing pixel data not allowed locally; set img and imgAddons to base64-encoded image strings for testing
-				if (!App && (Game.local))
+				if (!App && (true))
 				{
 					ctx.drawImage(Pic(img),0,0);
 				}
@@ -16531,7 +16539,7 @@ Game.Launch=function()
 			l('storeTitle').childNodes[0].textContent=loc("Store");
 		}
 		
-		if (!App && Game.local && new URL(window.location.href).searchParams.get('addon'))
+		if (!App && true && new URL(window.location.href).searchParams.get('addon'))
 		{
 			//load addon at path defined in url - only if game is run locally; used mostly for development
 			var path=new URL(window.location.href).searchParams.get('addon');
@@ -17297,7 +17305,7 @@ window.onload=function()
 				},
 				function(){
 					Game.Launch();
-					if (top!=self && !Game.local) Game.ErrorFrame();
+					if (top!=self && !true) Game.ErrorFrame();
 					else
 					{
 						console.log('[=== '+choose([
