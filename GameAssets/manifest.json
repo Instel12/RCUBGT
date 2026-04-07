@@ -625,6 +625,12 @@
             "SuffixURL": "AI/index.html",
             "Icon": "AI/icon.png",
             "Tags": ["Tools"]
+        },
+        {
+            "Name": "BuildNow.gg",
+            "SuffixURL": "BuildNowGG/index.html",
+            "Icon": "BuildNowGG/icon.png",
+            "Tags": ["Skill", "Survival"]
         }
     ]
 }
