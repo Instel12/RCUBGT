@@ -10,7 +10,8 @@
         "Survival",
         "Two Player",
         "Port",
-        "Flash"
+        "Flash",
+        "Tools"
     ],
     "Games": [
         {
@@ -618,6 +619,12 @@
             "SuffixURL": "Gladihoppers/index.html",
             "Icon": "Gladihoppers/icon.png",
             "Tags": ["Skill", "Casual"]
+        },
+        {
+            "Name": "AI Chatbot",
+            "SuffixURL": "AI/index.html",
+            "Icon": "AI/icon.png",
+            "Tags": ["Tools"]
         }
     ]
 }

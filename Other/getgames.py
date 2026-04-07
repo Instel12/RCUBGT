@@ -9,5 +9,10 @@ all_items = data['Games']
 
 print("# ALL GAMES\n```")
 for item in all_items:
-    print(item["Name"])
+    if "Tools" not in item.get("Tags", []):
+        print(item.get("Name", "Unnamed Game"))
+print("```\n# ALL TOOLS\n```")
+for item in all_items:
+    if "Tools" in item.get("Tags", []):
+        print(item.get("Name", "Unnamed Game"))
 print("```")
