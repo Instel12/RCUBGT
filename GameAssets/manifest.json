@@ -21,6 +21,12 @@
             "Tags": ["Sports"]
         },
         {
+            "Name": "Retro Bowl College",
+            "SuffixURL": "RetroBowlCollege/index.html",
+            "Icon": "RetroBowlCollege/icon.png",
+            "Tags": ["Sports"]
+        },
+        {
             "Name": "Escape Road",
             "SuffixURL": "EscapeRoad/index.html",
             "Icon": "EscapeRoad/icon.png",
