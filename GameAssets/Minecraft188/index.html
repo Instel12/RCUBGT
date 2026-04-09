@@ -1,78 +1,251 @@
-<!DOCTYPE html-->
+<!DOCTYPE html>
+<html style="width:100%;height:100%;background-color:black;">
 
+<head>
+	<base href="https://instel12.github.io/RCUBGT/GameAssets/Minecraft188/">
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+	<meta name="description" content="Play minecraft 1.8 in your browser" />
+	<meta name="keywords" content="eaglercraft, eaglercraftx, minecraft, 1.8, 1.8.8" />
+	<meta property="og:locale" content="pt-BR" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="TropicaliaCraft - EaglercraftX" />
+	<meta property="og:description" content="Play minecraft 1.8 in your browser" />
+	<script type="text/javascript">
+		(function() {
+			function showFallbackButton() {
+				if(document.getElementById("br-fallback-btn")) return;
+				
+				var createBtn = function() {
+					if(document.getElementById("br-fallback-btn")) return;
+					var btn = document.createElement("button");
+					btn.id = "br-fallback-btn";
+					btn.innerText = "Erro de WASM detectado. Clique para jogar a versão JS";
+					btn.style.position = "absolute";
+					btn.style.zIndex = "100000";
+					btn.style.bottom = "20px";
+					btn.style.left = "50%";
+					btn.style.transform = "translateX(-50%)";
+					btn.style.padding = "15px 30px";
+					btn.style.fontSize = "20px";
+					btn.style.backgroundColor = "#d32f2f";
+					btn.style.color = "white";
+					btn.style.border = "2px solid white";
+					btn.style.borderRadius = "8px";
+					btn.style.cursor = "pointer";
+					btn.style.fontFamily = "sans-serif";
+					btn.style.boxShadow = "0 4px 6px rgba(0,0,0,0.3)";
+					btn.onclick = function() {
+						// window.location.href = "https://ecraft.tropicaliacraft.online";
+					};
+					if(document.body) {
+						document.body.appendChild(btn);
+					} else {
+						window.addEventListener('DOMContentLoaded', function() {
+							document.body.appendChild(btn);
+						});
+					}
+				};
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    /* Sayfa ve oyun çerçevesi için temel düzenlemeler */
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      overflow: hidden; /* Sayfanın gereksiz kaymasını engeller */
-    }
+				if(document.body) {
+					createBtn();
+				} else {
+					window.addEventListener('DOMContentLoaded', createBtn);
+				}
+			}
 
-    #game_frame {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #000; /* Arka plan rengi, isteğe bağlı */
-    }
-  </style>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/mece188/feh@main/classes.min.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/mece188/feh@main/fix-webm-duration.js"></script>
-  <script type="text/javascript">
-    window.addEventListener('load', function () {
-      window.focus();
-      document.body.addEventListener('click', function (e) {
-        window.focus();
-      }, false);
-    });
+			function showJSPIDialog() {
+				if(document.getElementById("jspi-error-modal")) return;
 
-    window.addEventListener("load", () => {
-      if (document.location.href.startsWith("file:")) {
-        console.warn("HTTP required. Do not open this file locally, run it via a local HTTP server.");
-      } else {
-        // Default configuration for EaglercraftX
-        if (!window.eaglercraftXOpts) {
-          window.eaglercraftXOpts = {
-            container: "game_frame",
-            assetsURI: "https://cdn.jsdelivr.net/gh/mece188/feh@main/assets.epk",
-            localesURI: "lang/",
-            servers: [
-              { addr: "wss://mc.arch.lol/", name: "ArchMC" },
-              { addr: "wss://sus.shhnowisnottheti.me", name: "Ayunboom" },
-              { addr: "wss://aeon-network.net/1.8", name: "Aeon" },
-              { addr: "wss://zentic.org/", name: "Zentic" }
-            ]
-          };
-        }
-        // Ensure container element exists
-        let container = document.querySelector(`#${window.eaglercraftXOpts.container}`);
-        if (!container) {
-          console.error("Container element not found. Creating a default one.");
-          container = document.createElement("div");
-          container.id = window.eaglercraftXOpts.container;
-          document.body.appendChild(container);
-        }
-        try {
-          main();
-        } catch (error) {
-          console.error("Error starting EaglercraftX:", error);
-        }
-      }
-    });
-  </script>
+				var createModal = function() {
+					if(document.getElementById("jspi-error-modal")) return;
+					
+					var overlay = document.createElement("div");
+					overlay.id = "jspi-error-modal";
+					overlay.style.position = "fixed";
+					overlay.style.top = "0";
+					overlay.style.left = "0";
+					overlay.style.width = "100%";
+					overlay.style.height = "100%";
+					overlay.style.backgroundColor = "rgba(0,0,0,0.9)";
+					overlay.style.zIndex = "999999999";
+					overlay.style.display = "flex";
+					overlay.style.alignItems = "center";
+					overlay.style.justifyContent = "center";
+					overlay.style.fontFamily = "sans-serif";
+					overlay.style.backdropFilter = "blur(5px)";
 
+					var box = document.createElement("div");
+					box.style.backgroundColor = "#222";
+					box.style.color = "white";
+					box.style.padding = "30px";
+					box.style.borderRadius = "12px";
+					box.style.maxWidth = "600px";
+					box.style.textAlign = "center";
+					box.style.border = "3px solid #d32f2f";
+					box.style.boxShadow = "0 0 20px rgba(211, 47, 47, 0.5)";
 
-  <!-- Ensure essential DOM elements exist -->
-  <div id="game_frame" class="_eaglercraftX_root_element" style="overflow: hidden;"><div class="_eaglercraftX_wrapper_element" style="position: relative; width: 100%; height: 100%; overflow: hidden;"><canvas class="_eaglercraftX_canvas_element" width="822" height="633" style="width: 100%; height: 100%; z-index: 1; image-rendering: pixelated; touch-action: pan-x pan-y; -webkit-tap-highlight-color: rgba(255, 255, 255, 0); cursor: default;"></canvas><div class="_eaglercraftX_keyboard_open_zone" style="display: none; position: absolute; background-color: transparent; top: 0px; left: 0px; width: 0px; height: 0px; z-index: 100; touch-action: pan-x pan-y; -webkit-tap-highlight-color: rgba(255, 255, 255, 0);"></div></div></div>
-  <div class="_eaglercraftX_wrapper_element"></div>
-  <div id="_eaglercraftX_crashReason" style="display:none;"></div>
-  <div id="_eaglercraftX_crashUserAgent" style="display:none;"></div>
+					var title = document.createElement("h2");
+					title.innerText = "JSPI não está ativado";
+					title.style.marginTop = "0";
+					title.style.color = "#ff5555";
+					title.style.fontSize = "24px";
+					box.appendChild(title);
 
-</content>
+					var msg = document.createElement("p");
+					msg.innerHTML = "O <strong>JSPI (JavaScript Promise Integration)</strong> não está ativado neste navegador.<br><br>" +
+						"Você tem duas opções:<br>" +
+						"1. Jogar a versão JavaScript (mais lenta, mas compatível).<br>" +
+						"2. Ativar o JSPI seguindo um tutorial e recarregar a página.";
+					msg.style.lineHeight = "1.6";
+					msg.style.marginBottom = "30px";
+					msg.style.fontSize = "16px";
+					box.appendChild(msg);
 
-<script src="https://instel12.github.io/RCUBGT/Assets/api/api.js"></script>
+					var btnContainer = document.createElement("div");
+					btnContainer.style.display = "flex";
+					btnContainer.style.justifyContent = "center";
+					btnContainer.style.gap = "20px";
+					btnContainer.style.flexWrap = "wrap";
+
+					var jsBtn = document.createElement("button");
+					jsBtn.innerText = "Jogar Versão JS (Recomendado)";
+					jsBtn.style.padding = "12px 24px";
+					jsBtn.style.fontSize = "16px";
+					jsBtn.style.fontWeight = "bold";
+					jsBtn.style.cursor = "pointer";
+					jsBtn.style.backgroundColor = "#4CAF50";
+					jsBtn.style.color = "white";
+					jsBtn.style.border = "none";
+					jsBtn.style.borderRadius = "6px";
+					jsBtn.style.transition = "background-color 0.2s";
+					jsBtn.onmouseover = function() { jsBtn.style.backgroundColor = "#45a049"; };
+					jsBtn.onmouseout = function() { jsBtn.style.backgroundColor = "#4CAF50"; };
+					jsBtn.onclick = function() {
+						// window.location.href = "https://ecraft.tropicaliacraft.online";
+					};
+					btnContainer.appendChild(jsBtn);
+
+					var closeBtn = document.createElement("button");
+					closeBtn.innerText = "Fechar e ver erro original";
+					closeBtn.style.padding = "12px 24px";
+					closeBtn.style.fontSize = "16px";
+					closeBtn.style.cursor = "pointer";
+					closeBtn.style.backgroundColor = "#555";
+					closeBtn.style.color = "white";
+					closeBtn.style.border = "1px solid #777";
+					closeBtn.style.borderRadius = "6px";
+					closeBtn.style.transition = "background-color 0.2s";
+					closeBtn.onmouseover = function() { closeBtn.style.backgroundColor = "#666"; };
+					closeBtn.onmouseout = function() { closeBtn.style.backgroundColor = "#555"; };
+					closeBtn.onclick = function() {
+						document.body.removeChild(overlay);
+					};
+					btnContainer.appendChild(closeBtn);
+
+					box.appendChild(btnContainer);
+					overlay.appendChild(box);
+
+					if(document.body) {
+						document.body.appendChild(overlay);
+					} else {
+						window.addEventListener('DOMContentLoaded', function() {
+							document.body.appendChild(overlay);
+						});
+					}
+				};
+
+				if(document.body) {
+					createModal();
+				} else {
+					window.addEventListener('DOMContentLoaded', createModal);
+				}
+			}
+
+			// Check for WebAssembly support
+			if (!window.WebAssembly) {
+				showFallbackButton();
+			}
+
+			function checkError(msg) {
+				msg = msg.toLowerCase();
+				if(msg.indexOf("wasm") !== -1 || msg.indexOf("webassembly") !== -1) {
+					if (msg.indexOf("jspi") !== -1 || msg.indexOf("suspender") !== -1 || msg.indexOf("promising") !== -1) {
+						showJSPIDialog();
+					} else {
+						showFallbackButton();
+					}
+				}
+			}
+
+			// Listen for errors
+			window.addEventListener("error", function(e) {
+				var msg = (e.message || "");
+				checkError(msg);
+			});
+
+			window.addEventListener("unhandledrejection", function(e) {
+				var msg = (e.reason ? e.reason.toString() : "");
+				checkError(msg);
+			});
+            
+            // Hook console.error
+            var originalConsoleError = console.error;
+            console.error = function() {
+                var args = Array.from(arguments);
+                var msg = args.join(' ');
+				checkError(msg);
+                originalConsoleError.apply(console, args);
+            };
+		})();
+	</script>
+	<script type="text/javascript" src="bootstrap.js"></script>
+	<script type="text/javascript">
+		"use strict";
+		window.addEventListener("load", function () {
+			if (window.location.href.indexOf("file:") === 0) {
+				alert("HTTP please, do not open this file locally, run a local HTTP server and load it via HTTP");
+			} else {
+
+				// %%%%%%%%% launch options %%%%%%%%%%%%
+
+				var relayId = Math.floor(Math.random() * 3);
+				window.eaglercraftXOpts = {
+					demoMode: false,
+					container: "game_frame",
+					assetsURI: "assets.epw",
+					worldsDB: "worlds",
+					lang: "En_US",
+					windowTitle: "TropicaliaCraft - EaglercraftX",
+					servers: [
+						{ addr: "wss://mc.arch.lol", name: "ArchMC" }
+					],
+
+					relays: [
+						{ addr: "wss://relay.deev.is/", comment: "lax1dude relay #1", primary: relayId == 0 },
+						{ addr: "wss://relay.lax1dude.net/", comment: "lax1dude relay #2", primary: relayId == 1 },
+						{ addr: "wss://relay.shhnowisnottheti.me/", comment: "ayunami relay #1", primary: relayId == 2 }
+					]
+				};
+
+				// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+				var q = window.location.search;
+				if ((typeof q === "string") && q[0] === "?" && (typeof window.URLSearchParams !== "undefined")) {
+					q = new window.URLSearchParams(q);
+					var s = q.get("server");
+					if (s) window.eaglercraftXOpts.joinServer = s;
+				}
+
+				main();
+
+			}
+		});
+	</script>
+</head>
+
+<body style="margin:0px;width:100%;height:100%;overflow:hidden;background-color:black;">
+	<div id="game_frame" style="width:100%;height:100%;"></div>
+</body>
+
+</html>

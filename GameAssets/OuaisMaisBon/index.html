@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang='fr'>
+<head>
+    <base href="https://www.ouaismaisbon.ch/">
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+<title>Ouais Mais Bon</title>
+<meta name="description" content="Ouais Mais Bon">
+<meta property="og:title" content="Ouais Mais Bon">
+<meta property="og:url" content="https://www.ouaismaisbon.ch/">
+<meta property="og:site_name" content="Ouais Mais Bon">
+<meta property="og:type" content="website">
+<meta property="og:description" content="Ouais Mais Bon">
+<meta property="og:image" content="https://www.ouaismaisbon.ch/img/ouais-mais-bon.jpg">
+<meta property="og:image:width" content="896">
+<meta property="og:image:height" content="448">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Ouais Mais Bon">
+<meta name="twitter:url" content="https://www.ouaismaisbon.ch/">
+<meta name="twitter:description" content="Ouais Mais Bon">
+<meta name="twitter:image:src" content="https://www.ouaismaisbon.ch/img/ouais-mais-bon.jpg">
+<style type='text/css'>
+	* { margin: 0; padding: 0; }
+	html, body { height: 100%; }
+	body { background-color: #000; }
+	table { width: 760px; margin: 0 auto; height: 100%; }
+	div.omb { width: 200px; height: 240px; background: url(img/ouaismaisbon.png) no-repeat; margin: 0 auto; }
+    #uselesslink {
+        font-family: Arial, Sans-serif;
+        position: absolute;
+        font-size: 18px;
+        padding: 10px;
+        background-color: rgba(255,255,255,0.2);
+        border-radius: 12px;
+        bottom: 30px;
+        left: 30px;
+        color: white;
+    
+    }
+    #uselesslink a {
+        color: #ccc;
+    }	
+</style>
+</head>
+<body>
+<h1 id='title'>Ouais Mais Bon</h1>
+<table>
+	<tr>
+		<td><div id='ouais' class='omb'></div></td>
+		<td><div id='mais' class='omb'></div></td>
+		<td><div id='bon' class='omb'></div></td>
+	</tr>
+</table>
+<!--<h2 id='uselesslink'><a title="The useless websites" href="http://www.the-useless.website">From the useless websites list</a></h2>-->
+<script src="howler.core.min.js"></script>
+<script>
+window.onload = function() {
+
+	var speach_cnt = 0;
+	var sound = new Howl({
+	  src: ['audio/ouaismaisbon.ogg', 'audio/ouaismaisbon.mp3', 'audio/ouaismaisbon.wav'],
+	  sprite: {
+	    ouais: [2000, 700],
+	    mais: [4000, 700],
+	    bon: [6000, 1000]
+	  }
+	});
+    
+	function Head(element, index, name, duration) {
+		var obj = this;
+		obj.element = element;
+		obj.index = index;
+		obj.name = name;
+		obj.duration = duration;
+		obj.state = 'off';
+
+		setInterval(function() {
+			if(obj.state=='on') {
+				if(new Date().getTime() > obj.end_time) {
+					obj.state = 'off';
+					obj.element.style.backgroundPosition = '';
+				}
+			}
+		}, 20);
+
+		var speach = function(event) {
+			sound.play(name);
+			obj.element.style.backgroundPosition = -200 * obj.index + 'px 0';
+			obj.end_time = new Date().getTime() + obj.duration;
+			obj.state = 'on';
+			speach_cnt++;
+			if(speach_cnt>=50) {
+				speach_cnt -= 50;
+				ga('send', 'event', 'speach', 'fun');
+			}
+			event.defaultPrevented = true;
+			event.preventDefault();
+			return false;
+		};
+
+		var disable = function() { 
+			event.defaultPrevented = true;
+			event.preventDefault();
+			return false;
+		};
+
+		obj.element.addEventListener('touchstart', speach);
+		obj.element.addEventListener('click', speach);
+		obj.element.addEventListener('mouseover', speach);
+		obj.element.addEventListener('touchend', disable);
+		obj.element.addEventListener('touchcancel', disable);
+	}
+
+	document.getElementById('title').style.display = 'none';
+	new Head(document.getElementById('ouais'), 1, 'ouais', 600);
+	new Head(document.getElementById('mais'), 2, 'mais', 532);
+	new Head(document.getElementById('bon'), 3, 'bon', 952);
+};
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-2742248-7', 'ouaismaisbon.ch');ga('send', 'pageview');
+
+</script>
+</body>
+</html>

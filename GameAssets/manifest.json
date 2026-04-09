@@ -661,6 +661,12 @@
             "SuffixURL": "AchievementUnlocked3/index.html",
             "Icon": "AchievementUnlocked3/icon.png",
             "Tags": ["Casual", "Puzzle", "Flash"]
+        },
+        {
+            "Name": "Ouais Mais Bon",
+            "Icon": "OuaisMaisBon/icon.gif",
+            "SuffixURL": "OuaisMaisBon/index.html",
+            "Tags": ["Tools"]
         }
     ]
 }
