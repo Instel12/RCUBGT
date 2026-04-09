@@ -18,6 +18,11 @@ const clientver = document.getElementById("clientver");
 let currentver = "";
 let overallver = "no idea 💀";
 
+window.actualfullscreen = false;
+let gameurl = "";
+
+window.theme = "Space";
+
 if (document.getElementById("singlefilepref").textContent == "false") {
     console.log("metadata: multifile");
     finalbaseurl = "../GameAssets/";
@@ -190,7 +195,6 @@ async function loadGames() {
         var gameURL = baseURL + game.SuffixURL;
         var iconURL = baseURL + game.Icon;
 
-        // Filter games by search value and selected tag
         if (normalize(game.Name).indexOf(searchValue) === -1) continue;
         if (selectedTag !== "All" && !game.Tags.includes(selectedTag)) continue;
 
@@ -253,11 +257,15 @@ function OpenSettings() {
 <h3>Spoofing</h3>
 <input type="text" placeholder="Page Title" value="RCUBGT" id="urlInput">
 <input type="text" placeholder="Favicon URL" value="" id="faviconInput">
+
 <p>
 <button onclick="setCloke('Home', 'https://ssl.gstatic.com/classroom/favicon.png');"><img style="height:20px;" src="https://ssl.gstatic.com/classroom/favicon.png"></button>
 <button onclick="setCloke('Clever', 'https://www.clever.com/wp-content/uploads/2023/06/cropped-Favicon-512px-32x32.png');"><img style="height:20px;" src="https://www.clever.com/wp-content/uploads/2023/06/cropped-Favicon-512px-32x32.png"></button>
 <button onclick="setCloke('IXL | Math, Language Arts, Science, Social Studies, and Spanish', 'https://www.ixl.com/ixl-favicon.png');"><img style="height:20px;" src="https://www.ixl.com/ixl-favicon.png"></button>
 <button onclick="setCloke('VEXcode V5', 'https://codev5.vex.com/static/img/icons/vexfavicon.ico');"><img style="height:20px;" src="https://codev5.vex.com/static/img/icons/vexfavicon.ico"></button>
+<p>
+<input type="checkbox" id="aboutblankfull" name="aboutblankfull" value="Bike">
+<label for="aboutblankfull"> about:blank Fullscreen</label>
 <h3>Storage</h3>
 <button onclick="parent.dumpStorage()">Backup Storage</button>
 <button onclick="parent.loadStorage()">Load Storage</button>
@@ -296,8 +304,19 @@ border: none;
 }
 </style>
 <script>
+document.getElementById("aboutblankfull").checked = parent.actualfullscreen;
+
+document.getElementById("urlInput").value = parent.PageTitle.innerText;
+document.getElementById("faviconInput").value = parent.PageIcon.href;
+
+document.getElementById("theme").value = parent.theme;
+
 document.getElementById("theme").onchange = function () {
   parent.settheme(this.value);
+};
+
+document.getElementById("aboutblankfull").onchange = function () {
+    parent.actualfullscreen = this.checked;
 };
 
 const input = document.getElementById("urlInput");
@@ -324,6 +343,7 @@ function setCloke(title, icon) {
 }
 
 function settheme(name) {
+    theme = name;
     console.log("set theme to " + name + " jsyk")
     if (name == "Space") {
         document.body.style.backgroundImage = "";
@@ -355,6 +375,7 @@ function showError(mesage) {
 }
 
 async function loadGame(url) {
+    gameurl = url;
     if (localpref.textContent == "false") {
         menuopt.innerHTML = `
         <a onclick="injectCode()"><img src="Images/Console.png"></a>
@@ -377,8 +398,17 @@ async function loadGame(url) {
 }
 
 function fullscreen() {
+    if (actualfullscreen) {
+        openaboutblank(gameurl);
+    } else {
+        actufullscreen();
+    }
+}
+
+function actufullscreen() {
     container.requestFullscreen();
 }
+
 function enableAntiClose() {
     window.addEventListener("beforeunload", function (e) {
     e.preventDefault();
@@ -431,4 +461,32 @@ function loadStorage() {
 
 function injectCode() {
     container.appendChild(document.createElement("script")).innerText = prompt("What code could you like to inject to the game? (Be careful! I am not affiliated with anything you enter):");
+}
+
+async function openaboutblank(url) {
+  try {
+    const newWindow = window.open('about:blank', '_blank');
+
+    if (!newWindow) {
+      alert('Pop-up blocked. Please allow pop-ups for this site.');
+      return;
+    }
+
+    const response = await fetch(url);
+    const text = await response.text();
+
+    newWindow.document.open();
+    newWindow.document.write(`
+      <style>
+        body { margin:0; padding:0; }
+      </style>
+      <span id="auth" style="display: none;">yep, authenticated</span>
+      ${text}
+    `);
+    newWindow.document.close();
+
+  } catch (error) {
+    alert('Failed to load content! Please report this error.');
+    console.error(error);
+  }
 }
