@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title id="PageTitle">RCUBGT</title>
+        <link id="PageIcon" rel="icon">
+        <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!-- This is the html metadata, it doesnt have to do with the page itsself -->
+        <span id="auth" style="display: none;">yep, authenticated</span> <!-- dont change this line at all if you dont want an annoying ahh watermark on all of the games -->
+        <span id="clientver" style="display: none;">1.3.0</span>
+        <span id="singlefilepref" style="display: none;">true</span>
+        <!-- ehh, enough of the metadata -->
+
+        <div class="Banner">
+            <a onclick="LoadHomepage()">RCUBGT</a>
+            <span id="MenuOptions">
+
+            </span>
+        </div>
+
+        <iframe id="Container"></iframe>
+        <div id="particles"></div>
+
+        <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+        <script>
+            const localpref = document.getElementById("singlefilepref");
+
+            const css = document.createElement("link");
+            const js = document.createElement("script");
+
+            const menuopt = document.getElementById("MenuOptions");
+            const gameopt = document.getElementById("GameOptions");
+
+            let finalprefix = "";
+
+            css.rel = "stylesheet";
+        
+            if (window.location.protocol === "file:") {
+                if (localpref.textContent == "true") {
+                    alert("It seems you're using the file protocol, expect some bugs.")
+                }
+                else{
+                    alert("It seems you're using the file protocol, while the file is not marked as single file. Due to CORS, you cannot download the manifest which makes this useless.")
+                }
+            }
+            if (window.location.protocol === "data,") {
+                alert("It seems you're using the data protocol, most features will not work unless on http or https")
+            }
+
+            if (localpref.textContent == "false") {
+                finalprefix = "";
+            }
+            else{
+                finalprefix = "https://instel12.github.io/RCUBGT/Assets/";
+            }
+
+            js.src = finalprefix + "script.js";
+            css.href = finalprefix + "style.css";
+
+            document.body.append(js);
+            document.head.appendChild(css);
+        </script>
+    </body>
+</html>
+

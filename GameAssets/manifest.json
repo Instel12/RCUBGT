@@ -667,6 +667,12 @@
             "Icon": "OuaisMaisBon/icon.gif",
             "SuffixURL": "OuaisMaisBon/index.html",
             "Tags": ["Tools"]
+        },
+        {
+            "Name": "Drift Boss",
+            "Icon": "DriftBoss/icon.png",
+            "SuffixURL": "DriftBoss/index.html",
+            "Tags": ["Skill", "Survival"]
         }
     ]
 }
