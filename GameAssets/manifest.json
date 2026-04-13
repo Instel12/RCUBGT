@@ -673,6 +673,12 @@
             "Icon": "DriftBoss/icon.png",
             "SuffixURL": "DriftBoss/index.html",
             "Tags": ["Skill", "Survival"]
+        },
+        {
+            "Name": "Universal Paperclips",
+            "Icon": "UniversalPaperclips/icon.png",
+            "SuffixURL": "UniversalPaperclips/index.html",
+            "Tags": ["Casual"]
         }
     ]
 }
