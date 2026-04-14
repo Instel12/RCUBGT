@@ -679,6 +679,90 @@
             "Icon": "UniversalPaperclips/icon.png",
             "SuffixURL": "UniversalPaperclips/index.html",
             "Tags": ["Casual"]
+        },
+        {
+            "Name": "Pizza Tower",
+            "Icon": "PizzaTower/favicon.ico",
+            "SuffixURL": "PizzaTower/index.html",
+            "Tags": ["Platformer", "Tools"]
+        },
+        {
+            "Name": "Tunnel Rush",
+            "Icon": "TunnelRush/icon.png",
+            "SuffixURL": "TunnelRush/index.html",
+            "Tags": ["Survival"]
+        },
+        {
+            "Name": "Moto X3M",
+            "Icon": "MotoX3m/icon.png",
+            "SuffixURL": "MotoX3m/index.html",
+            "Tags": ["Platformer", "Skill"]
+        },
+        {
+            "Name": "Minecraft Skin Editor",
+            "Icon": "MinecraftSkinEditor/icon.png",
+            "SuffixURL": "MinecraftSkinEditor/index.html",
+            "Tags": ["Tools"]
+        },
+        {
+            "Name": "Jelly Truck",
+            "Icon": "JellyTruck/icon.png",
+            "SuffixURL": "JellyTruck/index.html",
+            "Tags": ["Platformer", "Skill"]
+        },
+        {
+            "Name": "Vex",
+            "Icon": "Vex1/icon.png",
+            "SuffixURL": "Vex1/index.html",
+            "Tags": ["Platformer", "Skill", "Flash"]
+        },
+        {
+            "Name": "Vex 2",
+            "Icon": "Vex2/icon.png",
+            "SuffixURL": "Vex2/index.html",
+            "Tags": ["Platformer", "Skill", "Flash"]
+        },
+        {
+            "Name": "Vex 3",
+            "Icon": "Vex3/icon.png",
+            "SuffixURL": "Vex3/index.html",
+            "Tags": ["Platformer", "Skill"]
+        },
+        {
+            "Name": "Vex 4",
+            "Icon": "Vex4/icon.png",
+            "SuffixURL": "Vex4/index.html",
+            "Tags": ["Platformer", "Skill"]
+        },
+        {
+            "Name": "Vex 5",
+            "Icon": "Vex5/icon.png",
+            "SuffixURL": "Vex5/index.html",
+            "Tags": ["Platformer", "Skill"]
+        },
+        {
+            "Name": "Vex 6",
+            "Icon": "Vex6/icon.png",
+            "SuffixURL": "Vex6/index.html",
+            "Tags": ["Platformer", "Skill"]
+        },
+        {
+            "Name": "Vex 7",
+            "Icon": "Vex7/icon.png",
+            "SuffixURL": "Vex7/index.html",
+            "Tags": ["Platformer", "Skill"]
+        },
+        {
+            "Name": "Vex 8",
+            "Icon": "Vex8/icon.png",
+            "SuffixURL": "Vex8/index.html",
+            "Tags": ["Platformer", "Skill"]
+        },
+        {
+            "Name": "Grind Craft",
+            "Icon": "GrindCraft/icon.png",
+            "SuffixURL": "GrindCraft/index.html",
+            "Tags": ["Casual"]
         }
     ]
 }

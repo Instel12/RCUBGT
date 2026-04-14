@@ -20,6 +20,7 @@ let overallver = "no idea 💀";
 
 window.actualfullscreen = false;
 let gameurl = "";
+let gamecontent = "";
 
 window.theme = "Space";
 
@@ -375,14 +376,17 @@ function showError(mesage) {
 }
 
 async function loadGame(url) {
+    LaunchGameStats(url.slice(finalbaseurl.length).slice(0, -11));
     gameurl = url;
     if (localpref.textContent == "false") {
         menuopt.innerHTML = `
+        <a onclick="downloadplease()"><img src="Images/Download.png"></a>
         <a onclick="injectCode()"><img src="Images/Console.png"></a>
         <a onclick="fullscreen()"><img src="Images/Fullscreen.png"></a>`;
     }
     else{
         menuopt.innerHTML = `
+        <a onclick="downloadplease()"><img src="https://instel12.github.io/RCUBGT/Assets/Images/Download.png"></a>
         <a onclick="injectCode()"><img src="https://instel12.github.io/RCUBGT/Assets/Images/Console.png"></a>
         <a onclick="fullscreen()"><img src="https://instel12.github.io/RCUBGT/Assets/Images/Fullscreen.png"></a>`;
     
@@ -391,6 +395,8 @@ async function loadGame(url) {
     const html = await response.text();
 
     const iframe = document.getElementById("Container");
+
+    gamecontent = html;
 
     iframe.contentWindow.document.open();
     iframe.contentWindow.document.write(html);
@@ -489,4 +495,21 @@ async function openaboutblank(url) {
     alert('Failed to load content! Please report this error.');
     console.error(error);
   }
+}
+
+function downloadplease() {
+    const newWindow = window.open('about:blank', '_blank');
+
+    newWindow.document.open();
+    newWindow.document.write(`
+        <h1>Please read this</h1>
+        Don't remove the api, if you do, you're a skid.<p>
+        <p style="color:green;">All of the stuff on this site is single file cause I'm like that so yeah, also don't even worry about CORS, cuh.</p>
+        <a href="data:text/html;charset=utf-8,${encodeURIComponent(gamecontent)}" download="`+gameurl.slice(finalbaseurl.length).slice(0, -11)+`">
+            <button>Download</button>
+        </a>
+
+        <p><img src="${finalbaseurl4assets}Images/fallodaruls.gif">
+    `);
+    newWindow.document.close();
 }
