@@ -29,6 +29,7 @@
 
             const css = document.createElement("link");
             const js = document.createElement("script");
+            const stats = document.createElement("script");
 
             const menuopt = document.getElementById("MenuOptions");
             const gameopt = document.getElementById("GameOptions");
@@ -57,11 +58,12 @@
             }
 
             js.src = finalprefix + "script.js";
+            stats.src = finalprefix + "stats.js";
             css.href = finalprefix + "style.css";
 
+            document.body.append(stats);
             document.body.append(js);
             document.head.appendChild(css);
         </script>
     </body>
 </html>
-
