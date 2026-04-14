@@ -540,7 +540,7 @@
             "Name": "Bad Piggies",
             "SuffixURL": "BadPiggies/index.html",
             "Icon": "BadPiggies/icon.webp",
-            "Tags": ["Puzzle", "Casual"]
+            "Tags": ["Puzzle", "Casual", "Flash"]
         },
         {
             "Name": "Cut the Rope",
@@ -769,6 +769,12 @@
             "Icon": "Hextris/icon.png",
             "SuffixURL": "Hextris/index.html",
             "Tags": ["Skill"]
+        },
+        {
+            "Name": "Tiny Fishing",
+            "Icon": "TinyFishing/icon.png",
+            "SuffixURL": "TinyFishing/index.html",
+            "Tags": ["Casual"]
         }
     ]
 }
