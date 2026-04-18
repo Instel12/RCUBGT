@@ -775,6 +775,24 @@
             "Icon": "TinyFishing/icon.png",
             "SuffixURL": "TinyFishing/index.html",
             "Tags": ["Casual"]
+        },
+        {
+            "Name": "Cell Machine",
+            "Icon": "CellMachine/icon.png",
+            "SuffixURL": "CellMachine/index.html",
+            "Tags": ["Puzzle"]
+        },
+        {
+            "Name": "Bad Parenting: Mr. Redface",
+            "Icon": "BadParenting1/icon.png",
+            "SuffixURL": "BadParenting1/index.html",
+            "Tags": ["Port", "Horror"]
+        },
+        {
+            "Name": "Bendy and the Ink Machine",
+            "Icon": "BendyAndTheInkMachine/icon.png",
+            "SuffixURL": "BendyAndTheInkMachine/index.html",
+            "Tags": ["Port", "Horror"]
         }
     ]
 }
