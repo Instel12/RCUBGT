@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+      <base href="https://instel12.github.io/RCUBGT/GameAssets/ThornsAndBalloons/">
+    <meta charset="UTF-8">
+    <title>Thorn and Balloons</title>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+    <meta name="generator" content="Scirra Construct">
+    <meta name="author" content="Hooda Math">
+    <meta name="description" content="Puzzle">
+    <link rel="manifest" href="appmanifest.json">
+    <link rel="apple-touch-icon" sizes="128x128" href="icons/icon-128.png">
+    <link rel="apple-touch-icon" sizes="256x256" href="icons/icon-256.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="icons/icon-512.png">
+    <link rel="icon" type="image/png" href="icons/icon-512.png">
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Fixed bottom ad bar styles */
+        .fixed_bottom {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 1);
+            border-top: 1px solid #f2f2f2;
+            color: #fff;
+            z-index: 10001;
+            transform: translateY(0);
+            transition: transform 0.4s;
+            padding: 0;
+        }
+
+        .fixed_bottom.expanded {
+            transform: translateY(100%);
+        }
+
+        .fixed_bottom .fixed_btn {
+            position: absolute;
+            top: -36px;
+            right: 20px;
+            background: #fff;
+            color: #333;
+            border: 1px solid #f2f2f2;
+            border-bottom: 0;
+            border-radius: 10px 10px 0 0;
+            padding: 6px 24px;
+            cursor: pointer;
+            font-size: 1em;
+            user-select: none;
+        }
+
+        .fixed_bottom .fixed_inner {
+            padding: 24px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        if (location.protocol.substr(0, 4) === "file") {
+            alert("Web exports won't work until you upload them. (When running on the file: protocol, browsers block many features from working for security reasons.)");
+        }
+    </script>
+
+    <noscript>
+        <div id="notSupportedWrap">
+            <h2 id="notSupportedTitle">This content requires JavaScript</h2>
+            <p class="notSupportedMessage">JavaScript appears to be disabled. Please enable it to view this content.</p>
+        </div>
+    </noscript>
+    <!-- <div class="fixed_bottom" style="display: none;">
+        <div class="fixed_btn">Close</div>
+        <div class="fixed_inner">
+            <ins class="adsbygoogle" style="display:inline-block;width:970px;height:90px"
+                data-ad-client="ca-pub-4709943143417910" data-ad-slot="5124630945"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div> -->
+    <script src="scripts/modernjscheck.js"></script>
+    <script src="scripts/supportcheck.js"></script>
+    <script src="scripts/offlineclient.js" type="module"></script>
+    <script src="scripts/main.js" type="module"></script>
+    <script src="scripts/register-sw.js" type="module"></script>
+    <script>
+        // Safely check if we're in an iframe
+        var isInIframe = true;
+
+        try {
+            if (window.parent && window.parent !== window) {
+
+                // First try using ancestorOrigins if available
+                if (window.location.ancestorOrigins && window.location.ancestorOrigins.length > 0) {
+                    var parentOrigin = window.location.ancestorOrigins[0];
+                    if (parentOrigin.includes('thornandballoons.com')) {
+                        isInIframe = false;
+                    }
+                } else {
+                    // Fallback to the old method if ancestorOrigins is not available
+                    try {
+                        // Try to access parent's hostname - will throw error if cross-origin
+                        var parentHostname = window.parent.location.hostname;
+                        if (parentHostname.includes('thornandballoons.com')) {
+                            isInIframe = false;
+                        }
+                    } catch (e) {
+                        // Cross-origin error occurred, treat as external iframe
+                        isInIframe = true;
+                    }
+                }
+            }
+        } catch (e) {
+            // If an error occurs, just proceed without showing the toast
+        }
+
+        var fixedBottom = document.querySelector('.fixed_bottom');
+        var fixedBtn = document.querySelector('.fixed_btn');
+
+        if (isInIframe && fixedBottom) {
+            fixedBottom.style.display = 'block';
+            fixedBottom.classList.remove('expanded'); // collapsed by default
+        }
+
+        fixedBottom && fixedBtn.addEventListener('click', function () {
+            fixedBottom.classList.toggle('expanded');
+        })
+    </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"7a037fa9f6b24eb38618c9549ce47057","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+<script src="https://instel12.github.io/RCUBGT/Assets/api/api.js"></script>

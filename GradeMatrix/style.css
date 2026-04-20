@@ -1,0 +1,48 @@
+body{
+    background-image: url(img/wood.jpg);
+    font-family: sans-serif;
+    margin: 0px;
+}
+
+.container{
+    background-color: rgb(255, 255, 255);
+    width: 50%;
+    margin-left: 25%;
+    margin-top: -1%;
+    height: 50vh;
+}
+
+.description{
+    margin: 5px;
+    padding: 5px;
+    margin-top: -1.5%;
+}
+
+.banner{
+    margin-left: 1%;
+}
+
+a{
+    color: rgb(0, 0, 255);
+}
+
+.login{
+    position: absolute;
+    right: 25.2%;
+    top: 0px;
+}
+.desctext{
+    width: 75%;
+}
+
+.aplusimg{
+    height: 20%;
+
+    position: absolute;
+    right: 26%;
+    top: 15%;
+}
+
+.features{
+    margin-top: -3%;
+}
