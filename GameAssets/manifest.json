@@ -811,6 +811,12 @@
             "Icon": "PeoplePlayground/icon.png",
             "SuffixURL": "PeoplePlayground/index.html",
             "Tags": ["Port", "Casual"]
+        },
+        {
+            "Name": "Krunker.io",
+            "Icon": "KrunkerIo/icon.jpg",
+            "SuffixURL": "KrunkerIo/index.html",
+            "Tags": ["Survival", "Skill"]
         }
     ]
 }

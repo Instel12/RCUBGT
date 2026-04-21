@@ -1334,7 +1334,7 @@ self.Box2DWasmModule = function (Box2D) {
             return 0
         },
         _abort: function () {
-            b.abort()
+            // b.abort()
         },
         ___gxx_personality_v0: function () { },
         _emscripten_asm_const_iiidii: function (a, c, d, e, g, l) {
