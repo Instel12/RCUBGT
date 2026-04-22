@@ -817,6 +817,12 @@
             "Icon": "KrunkerIo/icon.jpg",
             "SuffixURL": "KrunkerIo/index.html",
             "Tags": ["Survival", "Skill"]
+        },
+        {
+            "Name": "Emulator.js",
+            "Icon": "EmulatorJs/icon.png",
+            "SuffixURL": "EmulatorJs/index.html",
+            "Tags": ["Tools"]
         }
     ]
 }
