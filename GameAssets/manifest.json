@@ -860,6 +860,54 @@
             "Icon": "PuffleRoundup/icon.webp",
             "SuffixURL": "PuffleRoundup/index.html",
             "Tags": ["Flash"]
+        },
+        {
+            "Name": "Duck Life",
+            "Icon": "DuckLife/icon.webp",
+            "SuffixURL": "DuckLife/index.html",
+            "Tags": ["Flash", "Casual"]
+        },
+        {
+            "Name": "Duck Life 2",
+            "Icon": "DuckLife2/icon.webp",
+            "SuffixURL": "DuckLife2/index.html",
+            "Tags": ["Flash", "Casual"]
+        },
+        {
+            "Name": "Duck Life 3",
+            "Icon": "DuckLife3/icon.webp",
+            "SuffixURL": "DuckLife3/index.html",
+            "Tags": ["Flash", "Casual"]
+        },
+        {
+            "Name": "Duck Life 4",
+            "Icon": "DuckLife4/icon.webp",
+            "SuffixURL": "DuckLife4/index.html",
+            "Tags": ["Flash", "Casual"]
+        },
+        {
+            "Name": "Interactive Buddy",
+            "Icon": "InteractiveBuddy/icon.webp",
+            "SuffixURL": "InteractiveBuddy/index.html",
+            "Tags": ["Flash", "Casual"]
+        },
+        {
+            "Name": "Fireboy and Watergirl: In the Forest",
+            "Icon": "FireboyAndWatergirlInTheForest/icon.png",
+            "SuffixURL": "FireboyAndWatergirlInTheForest/index.html",
+            "Tags": ["Flash", "Platformer"]
+        },
+        {
+            "Name": "Fireboy and Watergirl: In the Light Temple",
+            "Icon": "FireboyAndWatergirlInTheLightTemple/icon.jpg",
+            "SuffixURL": "FireboyAndWatergirlInTheLightTemple/index.html",
+            "Tags": ["Flash", "Platformer"]
+        },
+        {
+            "Name": "Crazy Taxi",
+            "Icon": "CrazyTaxi/icon.png",
+            "SuffixURL": "CrazyTaxi/index.html",
+            "Tags": ["Casual"]
         }
     ]
 }
