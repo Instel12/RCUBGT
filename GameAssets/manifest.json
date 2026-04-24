@@ -11,7 +11,8 @@
         "Two Player",
         "Port",
         "Flash",
-        "Tools"
+        "Tools",
+        "Emulator"
     ],
     "Games": [
         {
@@ -822,7 +823,43 @@
             "Name": "Emulator.js",
             "Icon": "EmulatorJs/icon.png",
             "SuffixURL": "EmulatorJs/index.html",
-            "Tags": ["Tools"]
+            "Tags": ["Tools", "Emulator"]
+        },
+        {
+            "Name": "Web Retro",
+            "Icon": "WebRetro/icon.png",
+            "SuffixURL": "WebRetro/index.html",
+            "Tags": ["Tools", "Emulator"]
+        },
+        {
+            "Name": "Club Penguin: Bean Counters",
+            "Icon": "BeanCounters/icon.webp",
+            "SuffixURL": "BeanCounters/index.html",
+            "Tags": ["Flash"]
+        },
+        {
+            "Name": "Club Penguin: Catchin' Waves",
+            "Icon": "CatchinWaves/icon.jpg",
+            "SuffixURL": "CatchinWaves/index.html",
+            "Tags": ["Flash"]
+        },
+        {
+            "Name": "Club Penguin: Feed a Puffle",
+            "Icon": "FeedAPuffle/icon.webp",
+            "SuffixURL": "FeedAPuffle/index.html",
+            "Tags": ["Flash"]
+        },
+        {
+            "Name": "Club Penguin: Fluffy the Fish",
+            "Icon": "FluffyTheFish/icon.webp",
+            "SuffixURL": "FluffyTheFish/index.html",
+            "Tags": ["Flash"]
+        },
+        {
+            "Name": "Club Penguin: Puffle Roundup",
+            "Icon": "PuffleRoundup/icon.webp",
+            "SuffixURL": "PuffleRoundup/index.html",
+            "Tags": ["Flash"]
         }
     ]
 }
