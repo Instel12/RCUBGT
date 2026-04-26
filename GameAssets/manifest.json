@@ -862,6 +862,24 @@
             "Tags": ["Flash"]
         },
         {
+            "Name": "Club Penguin: Puffle Launch",
+            "Icon": "PuffleLaunch/Puffle Launch.ico",
+            "SuffixURL": "PuffleLaunch/index.html",
+            "Tags": ["Flash"]
+        },
+        {
+            "Name": "Club Penguin: Smoothie Smash",
+            "Icon": "SmoothieSmash/icon.webp",
+            "SuffixURL": "SmoothieSmash/index.html",
+            "Tags": ["Flash"]
+        },
+        {
+            "Name": "Club Penguin: Pizzatron 3000",
+            "Icon": "Pizzatron3000/icon.webp",
+            "SuffixURL": "Pizzatron3000/index.html",
+            "Tags": ["Flash"]
+        },
+        {
             "Name": "Duck Life",
             "Icon": "DuckLife/icon.webp",
             "SuffixURL": "DuckLife/index.html",

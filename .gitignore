@@ -1,3 +1,5 @@
 gradematrix/deobfuscated
 Assets/stats deobfuscated.js
 GradeMatrix/
+Tools/checknoapi.py
+Tools/getgames.py
