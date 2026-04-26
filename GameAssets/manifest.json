@@ -826,12 +826,6 @@
             "Tags": ["Tools", "Emulator"]
         },
         {
-            "Name": "Web Retro",
-            "Icon": "WebRetro/icon.png",
-            "SuffixURL": "WebRetro/index.html",
-            "Tags": ["Tools", "Emulator"]
-        },
-        {
             "Name": "Club Penguin: Bean Counters",
             "Icon": "BeanCounters/icon.webp",
             "SuffixURL": "BeanCounters/index.html",
@@ -920,12 +914,6 @@
             "Icon": "FireboyAndWatergirlInTheLightTemple/icon.jpg",
             "SuffixURL": "FireboyAndWatergirlInTheLightTemple/index.html",
             "Tags": ["Flash", "Platformer"]
-        },
-        {
-            "Name": "Crazy Taxi",
-            "Icon": "CrazyTaxi/icon.png",
-            "SuffixURL": "CrazyTaxi/index.html",
-            "Tags": ["Casual"]
         }
     ]
 }
