@@ -929,9 +929,21 @@
         },
         {
             "Name": "Steal Brainrot Duel",
-            "Icon": "StealBrainrotDuel/icon.png",
+            "Icon": "StealBrainrotDuel/icon.webp",
             "SuffixURL": "StealBrainrotDuel/index.html",
             "Tags": ["Two Player"]
+        },
+        {
+            "Name": "Solar Smash",
+            "Icon": "SolarSmash/icon.png",
+            "SuffixURL": "SolarSmash/index.html",
+            "Tags": ["Casual"]
+        },
+        {
+            "Name": "Club Penguin Journey",
+            "Icon": "ClubPenguinJourney/icon.jpg",
+            "SuffixURL": "ClubPenguinJourney/index.html",
+            "Tags": ["Casual"]
         }
     ]
 }
