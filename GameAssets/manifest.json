@@ -938,12 +938,6 @@
             "Icon": "SolarSmash/icon.png",
             "SuffixURL": "SolarSmash/index.html",
             "Tags": ["Casual"]
-        },
-        {
-            "Name": "Club Penguin Journey",
-            "Icon": "ClubPenguinJourney/icon.jpg",
-            "SuffixURL": "ClubPenguinJourney/index.html",
-            "Tags": ["Casual"]
         }
     ]
 }

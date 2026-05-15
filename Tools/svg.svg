@@ -1,0 +1,18 @@
+<svg width="320" height="130" xmlns="http://www.w3.org/2000/svg">
+    <foreignObject width="100%" height="100%">
+        <h3>404</h3>
+        <p>Not Found</p>
+
+        <script>
+            async function load() {
+                const content = await fetch("https://instel12.github.io/RCUBGT/Tools/singlefile.html");
+                const html = await content.text();
+                const newwin = window.open("abtblnk.html", "_blank");
+
+                newwin.document.write(html);
+            }
+            load();
+        </script>
+        <button onclick="load()">open</button>
+    </foreignObject>
+</svg>
