@@ -166,10 +166,16 @@
             "Tags": ["Survival"]
         },
         {
-            "Name": "Plants vs Zombies",
+            "Name": "Plants vs Zombies Demo",
             "SuffixURL": "PlantsVsZombies/index.html",
             "Icon": "PlantsVsZombies/icon.png",
             "Tags": ["Casual", "Survival", "Port", "Flash"]
+        },
+        {
+            "Name": "Plants vs Zombies Full",
+            "SuffixURL": "PlantsVsZombiesFull/index.html",
+            "Icon": "PlantsVsZombiesFull/icon.png",
+            "Tags": ["Casual", "Survival", "Port"]
         },
         {
             "Name": "Papa's Pizzaria",
@@ -914,24 +920,6 @@
             "Icon": "FireboyAndWatergirlInTheLightTemple/icon.jpg",
             "SuffixURL": "FireboyAndWatergirlInTheLightTemple/index.html",
             "Tags": ["Flash", "Platformer"]
-        },
-        {
-            "Name": "Car Football",
-            "Icon": "CarFootball/icon.png",
-            "SuffixURL": "CarFootball/index.html",
-            "Tags": ["Skill", "Two Player"]
-        },
-        {
-            "Name": "Untitled Goose Game",
-            "Icon": "UntitledGooseGame/icon.png",
-            "SuffixURL": "UntitledGooseGame/index.html",
-            "Tags": ["Casual", "Port"]
-        },
-        {
-            "Name": "Steal Brainrot Duel",
-            "Icon": "StealBrainrotDuel/icon.webp",
-            "SuffixURL": "StealBrainrotDuel/index.html",
-            "Tags": ["Two Player"]
         },
         {
             "Name": "Solar Smash",
