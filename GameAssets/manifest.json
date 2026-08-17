@@ -926,12 +926,6 @@
             "Icon": "SolarSmash/icon.png",
             "SuffixURL": "SolarSmash/index.html",
             "Tags": ["Casual"]
-        },
-        {
-            "Name": "Discord",
-            "Icon": "Discord/icon.jpg",
-            "SuffixURL": "Discord/index.html",
-            "Tags": ["Tools"]
         }
     ]
 }

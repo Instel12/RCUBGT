@@ -15,6 +15,18 @@ const PageIcon = document.getElementById("PageIcon");
 
 const clientver = document.getElementById("clientver");
 
+const loadingMessages = [
+    "hi",
+    "\"1738\"",
+    "If you get this message, you are a peasenT",
+    "I was eating grapes and guess what, I felt my teeth degrading.",
+    "You know what else is massive?",
+    "Farex, pull my peal!",
+    "For the meme, for the dream and the Ehhhhhhhh team!",
+    "livefree999.org",
+    "Chords aren't that hard.\nJust pick a key, and do the key 7 above it. If you want to be lame, end there. If you want it to be happy, also do the key 4 from the first one, if you want it to be sad, do the same thing but with 3 from the first key instead of 4."
+]
+
 let currentver = "";
 let overallver = "no idea 💀";
 
@@ -34,14 +46,15 @@ if (document.getElementById("singlefilepref").textContent == "false") {
     finalbaseurl4assets = "https://instel12.github.io/RCUBGT/Assets/";
 }
 
-let manifest = "";
+let manifest = {};
+
 async function fetchManifest() {
     try {
         const response = await fetch(finalbaseurl + "manifest.json");
-        const data = await response.json();
-        return JSON.stringify(data);
+        return await response.json();
     } catch (err) {
-        return '{}';
+        console.error("Failed to load manifest:", err);
+        return { Games: [], Tags: [] };
     }
 }
 
@@ -169,7 +182,9 @@ function LoadHomepage() {
 </head>
 <body>
 
-<input style="width: 89%;" type="text" placeholder="Search" id="searchbar">
+<div style="color: black; background-color: white; margin-bottom: 20px;">Due to a bunch of crap happening, RCUBGT is kinda broken. I'm working on fixing it but like 50% of everything is broken.</div>
+
+<input style="width: 89%;" type="text" placeholder="Search from ` + manifest.Games.length + ` games" id="searchbar">
 <select style="width: 9%" id="tagFilter">
     <option value="All">All</option>
 </select>
@@ -180,8 +195,7 @@ function LoadHomepage() {
 const searchthing = document.getElementById("searchbar");
 const tagFilter = document.getElementById("tagFilter");
 
-const manifest = '` + manifest.replace(/'/g, "\\'") + `';
-
+const manifest = ` + JSON.stringify(JSON.stringify(manifest)) + `;
 async function loadGames() {
     const data = JSON.parse(manifest);
     const baseURL = "` + finalbaseurl + `";
